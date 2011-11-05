@@ -1,0 +1,260 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[a4paper, 10pt]{article}
+
+
+%------------Chinese support -------
+\usepackage[BoldFont,SlantFont,CJKsetspaces,CJKchecksingle]{xeCJK}
+\setCJKmainfont[BoldFont=Microsoft YaHei]{SimSun}
+%\setCJKmonofont{Microsoft YaHei}% 设置缺省中文字体
+\setCJKmonofont{SimSun}% 设置缺省中文字体
+\parindent 2em   %段首缩进
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+%Fonts and Tweaks for XeLaTeX
+\usepackage{fontspec}% provides font selecting commands 
+\usepackage{xunicode}% provides unicode character macros 
+\usepackage{xltxtra} % provides some fixes/extras
+\defaultfontfeatures{Scale=MatchLowercase}
+%\setmainfont[Mapping=tex-text]{Calibri}
+%\setmainfont[Mapping=tex-text]{Qlassik Medium}
+%\setmainfont[Mapping=tex-text]{Gill Sans MT}
+\setmainfont[Mapping=tex-text]{Trebuchet MS}
+\newfontfamily\notefont{Times}
+\newfontfamily\texfont{Baskerville}
+%\setsansfont[Mapping=tex-text]{Skia}
+%\setmonofont{Courier}
+%-----------------------------------------------------------
+
+
+
+
+%\usepackage{fullpage}
+\usepackage{textcomp}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+\usepackage[svgnames]{xcolor}           % xcolor package
+\definecolor{shadecolor}{gray}{0.90}    % Background color of section bars
+%Styling Itemizations
+
+\usepackage{pifont}
+\usepackage{bbding}
+\renewcommand{\labelitemi}{\ding{66}}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+
+\newcommand{\ressection}[1]
+{\fcolorbox{black}{shadecolor}{\vbox{\hsize 0.98\textwidth \textbf{\mbox{~}{\@ \large #1} \vphantom{p\^{E}}}}}}
+ 
+% Usage : ressubsection{item1}{comment1}{item2}{comment2}
+\newcommand{\ressubsection}[4]
+{
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}
+}
+ 
+% Usage : resrowitemlr{item}{comment}
+\newcommand{\resrowitemlr}[2]
+{
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
+    \textbf{#1} & #2 \\
+\end{tabular*}
+}
+ 
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large \fontsize{26}{26} {\notefont 陈思}}  & \Phone\@ (86)1580-163-1679\\
+中国北京市广源小区（西区） & \Envelope\@  schen23@buffalo.edu \\
+4号楼2004室 100055 &\PencilRightUp\@ www.darlingtree.com\\
+\end{tabular*}
+\\
+\vspace{0.1in}
+
+\ressection{教育经历}
+\begin{itemize}
+\item
+	\ressubheading{中国农业大学}{中国，北京市}{工学学士, 测控技术与仪器专业}{2006年-2010年}
+	\begin{itemize}
+		\resitem{优秀毕业生,毕业论文入选``校级百篇优秀论文“}
+		\resitem{相关课程: MATLAB应用, C语言程序设计, 微机原理与接口技术, 工程信号处理, 传感器与检测电路, 实用图像处理, 计算机测控技术, 单片机原理及应用}
+	\end{itemize}
+
+
+
+\item
+	\ressubheading{纽约州立大学布法罗分校}{美国纽约州，布法罗}{硕士（M.S.），电子工程专业 , (GPA 3.793)}{2010年九月 - 2012年五月}
+	\begin{itemize}
+		\resitem{专业课程: 无线多媒体传感器网络，信息论与编码，无线网络最优化设计，多媒体系统，并行算法，高级模拟电路，射频微波电路设计，生物芯片及微型芯片原理与制造}
+	\end{itemize}
+\end{itemize}
+
+\ressection{研究项目}
+\begin{itemize}
+\item
+	\ressubheading{智能温室测控系统}{中国，北京市}{指导教授：李道亮，杨柳，马道坤}{2009年 - 2010年五月}
+	\begin{itemize}
+		\resitem{使用CC2430单片机和Zigbee协议栈(z-stack)创建测控系统，实现对温室模型进行温度和湿度控制}
+		\resitem{使用Python, PHP, Javascript (jQuery), MySQL 和 C语言创建了一个实时的B/S系统}
+		\resitem{设计并制作了器材控制PCB板，用户可以通过电脑浏览器实现对温室模型中的各个器材的远程控制}
+		\resitem{设计并制作了温室模型}
+		\resitem{利用PHP反射机制设计并制作了一个插件系统，使得该智能温室测控系统可以通过安装插件添加新功能}
+	\end{itemize}
+
+\item
+	\ressubheading{感知无线电软件编程框架开发}{美国纽约州，布法罗}{指导教授:Dr.Tommaso Melodia, Prof.Dimitris A. Pados, Dr.Gesualdo Scutari }{2011年 - 2012年五月}
+	\begin{itemize}
+		\resitem{移植TCP/IP协议栈到GNU Radio的开发板USRP2}
+		\resitem{GNU Radio 多节点信息同步机制设计开发}
+		\resitem{设计并编程实现感知无线电软件框架的连接层，抽象层}
+	\end{itemize}
+
+
+\end{itemize}
+
+\ressection{发表文章}
+\begin{itemize}
+\item
+Rongchang Yuan, Si Chen, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan ,\emph{"Simulation and Models on Control of Pests with Ozone in Greenhouses Plant,"} in \textbf{ IASTED International Conference on Modelling, Simulation, and Identification (MSI'2011)}, Pittsburgh, USA, November 2011.
+\item
+Rongchang Yuan, HaiganYuan, Si Chen, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma,\emph{"Research on the k-coverage local wireless network and its communication coordination mechanism design,"} in \textbf{the Fifth International Conference on Computer and Computing Technologies in Agriculture (CCTA2011)}, Beijing, China, October 2011
+\end{itemize}
+
+\ressection{工作经验}
+\begin{itemize}
+\item
+	\ressubheading{ASSE/WH }{中国，北京市}{网站建设与网站管理 （兼职）}{2007年十月- 2008年二月}
+	\begin{itemize}
+		\resitem{使用曼波CMS系统对公司网站进行了重构}
+		\resitem{利用PHP结合MySQL制作了一个用户注册系统}
+	\end{itemize}
+
+
+\item
+
+	\ressubheading{新浪网技术（中国）有限公司}{中国，北京市}{应用开发工程师 （实习生）}{2010年四月 -  2010年七月}
+	\begin{itemize}
+		\resitem{使用Python (Matplotlib), Javascript (jQuery) 和 PHP 结合 MySQL创建了UNIX集群管理系统}
+		\resitem{设计并利用Python编程实现计算新浪微博每日最热门搜索词汇}
+		\resitem{使用IP地理数据库，Python，PHP结合MySQL, Javascript制作了一个使用频率指示器，可以显示当前时间不同地区用户使用新浪微博的频率。}
+	\end{itemize}
+
+\end{itemize}
+
+\ressection{课程项目}
+\begin{itemize}
+\item
+	\ressubheading{人脸面部特征识别系统}{}{多媒体系统课程设计}{2010年秋季学期}
+	\begin{itemize}
+		\resitem{设计并制作了一个可以从摄像头实时读取人脸面部特征并对其进行识别的数字视频处理系统}
+		\resitem{该系统使用C语言结合OpenCV和VLFeat库开发，并应用了尺度不变特征变换(SIFT) 算法和一系列图像处理函数}
+	\end{itemize}
+\item
+	\ressubheading{模拟电路及场效应晶体管器件设计}{}{高级模拟电路课程设计}{2010年秋季学期}
+	\begin{itemize}
+		\resitem{设计了一个高频串接放大器, 使用HSPICE对电路进行仿真, 并使用Cadence Virtuoso进行版面设计.}
+	\end{itemize}
+\item
+	\ressubheading{带有交指耦合结构的新型微带环形双频带通滤波器}{}{微波和射频电路课程设计}{2010年秋季学期}
+	\begin{itemize}
+		\resitem{微波和射频电路设计课程设计，三人一组对一篇论文中的电路进行仿真实验}
+		\resitem{使用HFSS进行电路仿真，并对结果进行了分析总结}
+	\end{itemize}
+
+\item
+	\ressubheading{其他项目}{}{中国农业大学本科在读期间项目}{2006年-2010年}
+	\begin{itemize}
+		\resitem{使用 `` Storm!'' 机器人拼装组件结合传感器扩展板，并使用C语言进行程序设计制作了自动关机机器人，可以实现自动寻找电脑关机按钮并关机}
+		\resitem{使用VC++结合MFC框架以及OpenCV库制作了一个简单的图像处理系统}
+		\resitem{在2" $\times$ 2.5'' 的一块面包板上设计并制作了一个监听器}
+		\resitem{使用PCI6011数据采集卡和VB编程制作了一个重量测量系统，可以实时显示所放重物重量}
+	\end{itemize}
+
+\end{itemize}
+\ressection{课外作品}
+	\begin{itemize}
+		\resitem{使用 UIUC大学的SigOps uBoot 系统，C语言以及汇编语言创建了个人操作系统—— \textquotesingle Quake\textquotesingle }
+		\resitem{使用Python, MySQL 开发了微博刷粉丝程序，可以让我的微博粉丝自动慢慢增加}
+		\resitem{使用Python, jQuery, PHP, MySQL创建了一个在线GPA自动计算系统}
+		\resitem{使用Python, C++, Sed, PHP, MySQL 和 Javascript设计了考试成绩短信发送系统，当出新成绩时，将第一时间自动给我手机发送该成绩}
+		\resitem{使用CC2430无线单片机和TinyOS片上系统结合PHP, MySQL, C和Shell Script创建了一个两栖爬行动物养殖缸监控系统}
+		\resitem{使用Google Map API, Javascript和HTML设计了一个地图校友录}
+		\resitem{校内未来工程师协会早期创始人和技术指导}
+	\end{itemize}
+\ressection{荣誉与奖励}
+	\begin{tabular*}{6.7in}{l@{\extracolsep{\fill}}r}
+	\\
+		\ding{52}\@ 毕业设计入选为”校级百篇优秀论文“& 2010\\
+		\ding{52}\@ 获得 “校级优秀毕业生”称号 & 2010\\
+		\ding{52}\@ 成功申请并参与国家大学生创新试验计划(项目经费2万余元) & 2009-2010\\
+		\ding{52}\@ 参加校内大学生科研计划(URP) (项目经费3000余元) & 2007-2008\\
+		\ding{52}\@ 美国数学建模大赛三等奖 & 2009\\
+		\ding{52}\@ 大学期间连续三年获得三等奖学金  & 2007,2008,2009\\
+		\ding{52}\@ 两次在院级辩论赛中获得“最佳辩手”称号  & 2006,2007\\
+		\\
+\end{tabular*}
+
+\ressection{已掌握技能}
+
+\begin{description}
+\item[编程语言:]
+Python, C/C++,  {\texfont \TeX}, Javascript, Shell (Bash), SQL, PHP, HTML, Perl, Java (JSP), 汇编, haskell
+\item[操作系统:]
+Linux (Archlinux), Mac OS X, Windows, FreeBSD
+\item[应用程序:]
+MATLAB, Vim, Cadence, {\texfont \LaTeX}, Photoshop, MS Office, Dreamweaver, Sed, gdb
+\item[编程框架:]
+GNU Radio (Python), Django (Python), Web.py (Python), jQuery(Javascript), SAE
+\item[杂项:]
+良好的英语听说读写能力，具备英文文献及技术文档学习能力，能够胜任在不同操作系统下任意软件安装配置管理，具备精准的故障排除和Debug技能，优秀的问题解决技能
+\end{description}
+
+\ressection{个人兴趣}
+
+\begin{description}
+\item[学术方面:] 无线传感器网络, 无线多媒体传感器网络, 感知无线电网络
+\item[运动:] 慢跑和游泳，爬山
+\item[电脑:]  平日喜爱使用Linux系统，在家制作电子小制作，用Python写程序开发有趣的应用等等
+\item[会员:] 在2009-2010年度为英国机械工程师协会会员，本科曾参加曲辰网进行学生社团网站开发
+\item[其他:] 读书，养动物，旅游
+\end{description}
+
+\end{document}
