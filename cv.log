@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2014.5.25)  28 MAR 2015 23:16
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2014.5.25)  28 MAR 2015 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**resume_short.tex
-(./resume_short.tex
+**cv.tex
+(./cv.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -691,9 +691,8 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/bbding/bbding.sty
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
-)
-(./resume_short.aux)
-\openout1 = `resume_short.aux'.
+) (./cv.aux)
+\openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
@@ -823,15 +822,20 @@ LaTeX Font Info:    Font shape `EU1/TrebuchetMS(0)/m/it' will be
 (Font)              scaled to size 9.02469pt on input line 110.
  [1
 
-]
-(./resume_short.aux) ) 
+] [2]
+LaTeX Font Info:    Font shape `EU1/Baskerville(0)/m/n' will be
+(Font)              scaled to size 11.84572pt on input line 268.
+LaTeX Font Info:    Font shape `EU1/Baskerville(0)/m/n' will be
+(Font)              scaled to size 8.65442pt on input line 272.
+ [3]
+(./cv.aux) ) 
 Here is how much of TeX's memory you used:
- 14092 strings out of 493734
- 287861 string characters out of 6146348
- 338500 words of memory out of 5000000
- 17301 multiletter control sequences out of 15000+600000
- 7446 words of font info for 55 fonts, out of 8000000 for 9000
+ 14096 strings out of 493734
+ 287853 string characters out of 6146348
+ 340490 words of memory out of 5000000
+ 17303 multiletter control sequences out of 15000+600000
+ 7462 words of font info for 57 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 46i,7n,88p,10419b,205s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,7n,88p,10409b,205s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume_short.pdf (1 page).
+Output written on cv.pdf (3 pages).
