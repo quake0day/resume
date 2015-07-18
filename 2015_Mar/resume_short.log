@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.6.30)  17 JUL 2015 22:02
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.6.30)  17 JUL 2015 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -780,7 +780,7 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/bbding/bbding.sty
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
-No file resume_short.aux.
+(./resume_short.aux)
 \openout1 = `resume_short.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -799,6 +799,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 98.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 98.
+
 (/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
@@ -913,8 +914,8 @@ LaTeX Font Info:    Font shape `EU1/TrebuchetMS(0)/m/it' will be
 ] [2]
 (./resume_short.aux) ) 
 Here is how much of TeX's memory you used:
- 14670 strings out of 494004
- 314469 string characters out of 3150890
+ 14672 strings out of 494004
+ 314503 string characters out of 3150890
  320701 words of memory out of 3000000
  17757 multiletter control sequences out of 15000+200000
  7446 words of font info for 55 fonts, out of 3000000 for 9000
