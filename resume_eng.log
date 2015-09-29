@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.5.30)  12 MAR 2015 11:30
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.5.30)  16 SEP 2015 10:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -861,21 +861,15 @@ LaTeX Font Info:    Font shape `EU1/TrebuchetMS(0)/m/it' will be
 (Font)              scaled to size 9.02469pt on input line 110.
  [1
 
-]
-LaTeX Font Info:    Font shape `EU1/Baskerville(0)/m/n' will be
-(Font)              scaled to size 11.84572pt on input line 257.
- [2]
-LaTeX Font Info:    Font shape `EU1/Baskerville(0)/m/n' will be
-(Font)              scaled to size 8.65442pt on input line 261.
- [3]
+] [2]
 (./resume_eng.aux) ) 
 Here is how much of TeX's memory you used:
- 15146 strings out of 493938
- 328405 string characters out of 6148857
- 337009 words of memory out of 5000000
- 18269 multiletter control sequences out of 15000+600000
- 7822 words of font info for 58 fonts, out of 8000000 for 9000
+ 15141 strings out of 493938
+ 328308 string characters out of 6148857
+ 336009 words of memory out of 5000000
+ 18266 multiletter control sequences out of 15000+600000
+ 7446 words of font info for 55 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  46i,7n,80p,618b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume_eng.pdf (3 pages).
+Output written on resume_eng.pdf (2 pages).
