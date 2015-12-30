@@ -1,0 +1,122 @@
+
+\documentclass[11pt]{article}
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
+\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=9in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+\begin{document}
+\title{Statement of Research, Teaching \& Leadership}
+\author{Si Chen}
+\date{}
+\maketitle
+% Important
+%Recently, the wide availability of smartphones and wearable devices (e.g. google glasses) equipped with built-in visual, acoustic and inertial sensors make the mobile users easier than ever to devote themselves to contributing mobile data. As a result, there have been several studies that tried to explore the possibilities of leveraging the inertial (accelerometer, gyroscope, compass), visual (camera) and acoustic (microphone) sensor with powerful public cloud to construct practical cyber-physical systems. 
+% Important% Important
+%Cyber-Physical Systems Security (CPSS) is a relatively novel computing paradigm, in which there is a tight integration of security, communications, computation, and the physical environment. An important feature of the cyber-physical systems (CPS) devices is their ability to interact with each other and the physical world around them. Nonetheless, current security models consider protecting only networking components of the CPS devices utilizing traditional security mechanisms. These protection mechanisms are not sufficient to protect the CPS from threats emanating from sensory side-channels (e.g. light, temperature, acoustic, infrared). 
+%The ever-growing computing and networking technologies today 
+%The wide availability of smartphones and wearable devices (e.g. google glasses) equipped with built-in visual, acoustic and inertial sensors make the mobile users easier than ever to devote themselves to contributing sensory and biometric data. Nonetheless, current security models consider protecting only networking components of the smart devices utilizing traditional security mechanisms. These protection mechanisms are not sufficient to protect these devices from threats emanating from sensory side-channels (e.g. light, temperature, acoustic, infrared). Being aware of this insufficiency of protection mechanisms, my current research focuses on exploring the novel ideas and techniques to tackle practical problems and critical security issues for the cloud-enabled smartphone sensing systems. 
+%All smartphones are preferred targets of attacks. These attacks exploit weaknesses related to smartphones that can come from means of communication 
+
+%Yet challenges remain on system security, functionality and efficiency.
+
+
+
+
+
+%pose security issues for mobile phone communication  
+
+
+%These attacks exploit weaknesses related to smartphones that can come from means of communication like Wi-Fi networks, Bluetooth and GSM,
+
+
+\section{Research Statement}
+
+%mobile computing = our sociate 
+
+
+%particularly through the use of modern smartphones, which are equipped with high-resolution cameras and various micro-electrical sensors. pose security issues for mobile phone communication  
+As we are entering the era of mobile computing, the wide proliferation of sensor-equipped smartphone is increasingly influencing our daily life. Since smartphone equipped sensors (e.g. microphone, camera, accelerometer, gyroscope, compass) collect an increasing amount of sensitive information, performance and security issues has inevitably critical impact in mobile computing. My current research focuses on exploring the novel ideas and techniques to tackle practical problems and security issues for the cloud-assisted smartphone sensing systems. In particular, I am experienced in smartphone-enabled crowdsourcing approaches that can build large-scale information infrastructures conveniently at a very low cost. Moreover, I also study smartphone security from the physical layer, leveraging various related characteristics to enable inherently secure and dependable wireless communications. My research approach is in general characterized by the innovative integration of interdisciplinary ideas and synergy through extensive collaborations. First, I find it intriguing to innovate ideas from multiple domains and creatively apply them to solve complex problems. For instance, my previous research integrated ideas from mobile sensing, cloud computing and signal processing to address challenges of securing short-range wireless communication with acoustic wave. Second, my research draws on advanced mathematical models, which allows the system designs to have a solid theoretical foundation. It helps pave the way to achieve robust result, even from inherently incomplete, opportunistic, and noisy crowdsourced data. Third, I am passionate in hands-on research, and believe that intensive experiment implementations on real cloud platforms are indispensable to ensure that my system design is practical and deployable. Finally, my research is invigorated by collaborations with others from diverse backgrounds: professors, industrial research scientist, engineers, and fellow students. Engaging other researchers' expertise not only offers alternative perspectives to approach research objectives, but also diversifies my knowledge and skills as a researcher. The following summarizes my research experience, related projects that demonstrate my research strategy, and my vision of future research directions.
+
+%For instance, my previous research integrated ideas from mobile sensing and computer vision to address challenges of reconstructing complex indoor interior view at scale.  
+\section*{Previous and Current Research}
+
+\textbf{Cloud-assisted Crowdsourcing Systems -} Crowdsourcing is a technology with the potential to revolutionize large-scale data gathering in an extremely cost-effective manner. It provides an unprecedented means of collecting data from the physical world, particularly through the use of modern smartphones, which are equipped with high-resolution cameras and various micro-electrical sensors. My research in this area currently addresses the critical yet demanding task of reconstructing the indoor floor map and interior view of a building from crowdsourced data. A typical indoor floor map succinctly illustrates spatial correlations of rooms, hallways and other features of the architecture from a top-down view over a floor. It plays an essential role in many indoor mobile applications, such as localization and navigation. However, unlike outdoor environment, acquiring digital indoor floor plan information is very challenging. The state-of-the-art Google Indoor Maps only have 10,000 locations available on-line, which is not in a position to compete with the total number of indoor environments around the world. The complexity of the indoor environment is the major obstacle to achieve ubiquitous coverage. Existing centralized collection and on-site calibration techniques demand professional devices and multi-party coordination, which are time consuming, inconvenient and costly. 
+
+In light of these challenges, I propose and demonstrate CrowdMap, a crowdsourcing system utilizing sensor-rich video data from mobile users for indoor floor plan reconstruction with low-cost. The key idea is to first jointly leverage crowdsourced sensory and video data to track user movements, and then use the inferred user motion traces and context of the image to produce an accurate floor plan. In particular, I exploit the sequential relationship between each consecutive frame abstracted from the video to improve system performance. The experiments in three college buildings demonstrate that our techniques achieve a significant improvement of accuracy compared with other crowdsourcing floor plan reconstruction systems. Going beyond 2D, I further propose, design, and prototype IndoorCrowd2D, a smartphone-empowered crowdsourcing system for indoor scene reconstruction. In particular, I formulate the problem via trackable models and employ a divide and conquer approach to address the inherently incomplete, opportunistic, and noisy crowdsourced data. By utilizing the image information and sensory data in a coordinated way, my system performs high result accuracy, as well as allows a gradual build-up procedure of the hallway skeleton. This is corroborated by my evaluations on reconstructing college buildings from 1,151 datasets uploaded by 25 users. It also shows that my image and sensor hybrid method is more robust to overcome errors and outliers compare to image-only method. Once fully hardened, I believe that this system is able to extend existing digital map services to indoor environment on a world scale. Moreover, IndoorCrowd2D can also serve an important stepping stone towards the ultimate goal of economically-viable massive indoor 3D model reconstruction. These preliminary results are reported at IEEE ICDCS \cite{ICDCS15} and ACM SenSys \cite{Sensys15}, a highly selective research venue on systems issues of broadly-defined sensors and sensor-enabled smart systems. 
+
+\textbf{Securing Short-Range Wireless Communications -} As an emerging advanced short-range communication technology, near field communication (NFC) is undergoing a fast rate of expansion with many promising benefits including low power, small size, and peer-to-peer communication, without incurring complex network configuration overhead. However, current NFC technologies suffer from one practical limitation: almost all NFC enabled applications require built-in NFC chipsets. Such low levels of penetration of special NFC hardware has stymied its applications on most mobile devices in the market. In addition, from the security perspective the confidentiality of the transmitted data has not been satisfactorily addressed by current NFC technologies, which do not incorporate any security at the physical or MAC layers by assuming that the extremely short range of communication itself has offered a degree of protection physically. 
+
+My research in this direction focuses on alternative NFC technologies, with an emphasis on line-of-sight based NFC and acoustic based NFC, which are compatible with legacy devices and existing infrastructure, and can provide a high level of security guarantee. For secure line-of-sight-based NFC, I have formalized the security analysis based on geometric models, and proposed physical security enhancement mechanisms for barcode communication by manipulating screen view angles and leveraging user-induced motions. For secure acoustics-based NFC, I have adopted the emerging friendly jamming technique from radio communication to achieve data confidentiality, leading to software-based solution to secure smartphone communication without the traditional key agreement phase. Based on the theoretical results, I further design and implement a cloud-assisted mobile system named AcousAuth. AcousAuth is designed for personal authentication. It features a seamless, faster, easier and safer user authentication process without the demand for special infrastructure. Potentially, any mobile devices or computers with microphone and speaker can use AcousAuth, regardless of the underlying hardware and operating systems. The cloud-assisted mobile sensing system provides a purely software-based solution to secure smartphone short-range communication without key agreement phase, and it is potentially well suited for legacy mobile devices. Both alternative NFC techniques have potential to provide NFC-like functionalities to the commercial smartphone applications, and enable much stronger security guarantees, yet with much less strict hardware support. These preliminary results are reported in the IEEE Internet of Things Journal \cite{IEEE}. The system prototype -- AcousAuth is in the top 10 finalist from the ACM Mobicom App Competition \footnote{http://www.sigmobile.org/mobicom/2013/app\_finalists.html}
+
+
+\textbf{Other Collaborative Research -} I have also explored research frontier of mobile social networks security, with representative works centering around the proliferation of smart mobile devices. The problem tackled relates to location-based social networks (LBSNs), which features friend discovery by location proximity, and has attracted hundreds of millions of users world-wide. While leading LBSN providers claim the well-protection of their users? location privacy, for the first time my work shows through real world attacks that these claims do not hold. In the identified attacks, a malicious individual with the capability of no more than a regular LBSN user can easily break most LBSNs by manipulating location information fed to LBSN client apps and running them as location oracles. My developed automated user location tracking system could geo-locate any target with high accuracy and readily recover his/her top 5 locations, according to a 3-week real-world experiment on 30 volunteers over leading LBSNs, like Wechat, Skout, and Momo. Besides the attack, I also help develop a framework that explores a grid reference system and location classifications to mitigate the attacks. The result serves as a critical security reminder of the current LBSNs pertaining to a vast number of users. This work was reported in ACM Mobihoc \cite{mobihoc}. 
+
+
+%\textbf{Professional Activities -}  I have actively participated in the larger community in a number of ways. Since 2012, along with my advisor, I have been a reviewer for more than 20 conferences, journals, magazines, and workshops. In addition to attending conferences NDSS 2013, Mobicom 2013, Mobihoc 2014, CCS 2014 and ICDCS 2015 to discuss and present our works, I have also been the Webmaster for the 27th IEEE Annual Computer Communications Workshop (CCW). 
+
+\section*{Future Research}
+\begin{itemize}
+
+\item
+\textbf{Cloud-assisted Mobile Crowdsourcing Systems:} As we are entering the era of mobile computing, the wide proliferation of sensor-equipped smart phones is increasingly influencing our daily life. Yet challenges remain on system efficiency, functionality, and security. I will continue the line of important research topics discussed earlier and explore the following three directions: First, I will further improve the cloud-assisted mobile systems to build a large-scale information processing cyber-infrastructure with low cost. Second, I will explore the possibility of utilizing unmanned aerial vehicles for advanced automated crowdsourcing system design with potentially improved accuracy and efficiency. Finally, I am interested in extending existing ubiquitous cloud-based crowdsourcing systems and focus on further processing of the crowd-sourced visual information to extract more context information from the indoor environment, such as object detection and object recognition. By combining technologies from different research domains, e.g., mobile sensing, computer vision, and machine learning, I plan to construct systems that are able to better digitalize our daily life by solving more practical problems. 
+
+
+\item \textbf{Sensor-assisted Mobile Authentication Systems:} I am looking forward to studying practical solutions for securing biometric-based mobile authentication. A lot of interesting yet challenging problems remain to be fully explored, including designing secure mechanism to defend against biometric-based impersonation attacks (e.g. voice impersonation attacks) on smartphones. Given the fact that there is a natural demand for users to control their mobile device in a convenient and non-intrusive way, many biometric-based mobile authentication applications have been developed. However, the human biometrics, e.g. human voice and human face, are often exposed to the public in many different scenarios. Traditional security mechanisms for these biometric authentication systems focus on data encryption and other post-processing techniques, but the biometric themselves often remain vulnerable to attacks in the physical/analog domain. If an adversary captures and manipulates a physical/analog signal prior to digitization, no amount of digital security mechanisms after the fact can help. Fortunately, nature imposes fundamental constraints on how these analog signals can behave. As for my future research, I will study the sensor-assisted mobile physical challenge-response authentication scheme to protect mobile authentication systems against impersonation attacks occurring in the physical/analog domain.
+
+
+
+\end{itemize}
+
+\section{Teaching Statement}
+
+
+\section*{Philosophy} 
+
+I always believe teaching and mentoring are two of academia's greatest appeals to me. As a graduate student, I was very fortunate to have valuable opportunities to teach and mentor students, and I enjoyed them immensely. These experiences taught me that teaching is not just transferring knowledge and skills to individuals, but inspiring the intellectual thought of young minds. Because of each student's unique background, interacting with students provides the best opportunity to connect ideas and spark creativity. It is here that I find teaching is most rewarding, and becoming an inspiring teacher is one of my life's purposes. In particular, I believe that the goal of education should be to encourage seeking answers, instead of directly giving answers. Helping the students to develop the ability to think creatively and learn independently is the main theme of my teaching philosophy. On the other hand, we should not downgrade the difficulty level of the course content to ensure average GPA and course satisfaction. Nothing shall be too complex to explain to general audience. A person always knows more than what he/she can express, and thus I believe there is always room to improve one's teaching skill no matter how experienced the lecturer is. For instance, I followed the same course - Cryptography more than 3 times taught by different lecturers from various institutes/universities - University at Buffalo, Stanford (via coursera), and University of Maryland (via coursera); the purpose is to study/learn the most effective way to present the ``complex" cryptographic/security concepts and primitives to general students, especially to those with weak mathematical background. With regard to student supervision, involvement of graduate students in research is another critical aspect of my teaching philosophy. In the past years, I gained tremendous gratification from training and mentoring with bright, energetic undergraduate/graduate students. 
+
+\subsection*{Teaching} 
+ I have rich experience in independent teaching (in English) at both undergraduate level and postgraduate level. In particular, I earned class teaching experience at University at Buffalo, where I started as a guest lecturer. In CSE 664 Applied Cryptography and Computer Security course, I have introduced many latest trending and important topics into the syllabus, which include cyber-physical system security, security and privacy on smart wearable device, mobile wireless security, and smartphone security. I have also designed new course projects that require in-depth knowledge over the new security technologies. These renovations to the course were well received by the students. Moreover, I also gave a 15\% seminar course for Security and Privacy in Emerging Applications at University at Buffalo. Therefore, I feel confident about lecturing courses in areas of cyber physical system, smartphone sensing, cloud computing security, smartphone security, and applied cryptography. I am also interested in contributing to new courses and seminars related to computer architecture, distributed system and advanced computer network. 
+\subsection*{Mentoring}
+ During my years as a senior PhD student at Ubiquitous Security and Privacy Lab (UbiSeC Lab), I mentored several junior graduate/undergraduate students with the support of my advisor, including four Master students as they progressed toward their theses. With each student, I held regular meetings, discussed the progress of research, and provided individual support on technical and sometimes emotional sides of graduate study. I also received valuable feedback from my advisor on mentoring techniques, and learned how to keep students motivated and inspired with their research and how to balance the level of direction each student needs. Through mentoring students and performing the role of a senior PhD candidate, I have been able to practice the essential skills to become a successful advisor. Undoubtedly, these invaluable lessons will enormously benefit my transition to the next level. 
+
+As an assistant professor, I feel excited about the opportunity to mentor great graduate students. My ultimate goal is to foster their diverse talents and strengths and guide them on the way to become self-motivated leading researchers. In doing so, I will bring the highly supportive and collaborative culture in which I have been raised by my graduate school professors.
+
+
+
+\renewcommand{\refname}{Selected Publications}
+\begin{thebibliography}{99}
+\bibitem{ICDCS15}
+\newblock Si Chen, Muyuan Li, Kui Ren, Chunming Qiao,
+\newblock ``CrowdMap: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos".
+\newblock {\em in Proceedings of the 35th IEEE International Conference on Distributed Computing Systems (ICDCS)}, 2015.
+
+
+\bibitem{Sensys15}
+\newblock Si Chen, Muyuan Li, Kui Ren, Xinwen Fu, Chunming Qiao,
+\newblock ``Rise of the Indoor Crowd: Reconstruction of Building Interior View via Mobile Crowdsourcing",
+\newblock {\em in Proceedings of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys)}, 2015.
+
+
+\bibitem{IEEE}
+\newblock Bingsheng Zhang, Qin Zhan, Si Chen, Muyuan Li, Kui Ren, Cong Wang, Di Ma,
+\newblock ``PriWhisper: Enabling Keyless Secure Acoustic Communication for Smartphones",
+\newblock {\em in IEEE Internet of Things Journal}, 2014.
+
+
+\bibitem{mobihoc}
+\newblock Muyuan Li, Haojin Zhu, Zhaoyu Gao, Si Chen, Le Yu, Shangqian Hu, Kui Ren,
+\newblock ``All your location are belong to us: Breaking mobile social networks for automated user location tracking",
+\newblock {\em in Proceedings of the 15th ACM international symposium on Mobile ad hoc networking and computing (Mobihoc)}, 2014.
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+

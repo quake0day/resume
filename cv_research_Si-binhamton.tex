@@ -1,0 +1,569 @@
+\documentclass[letter]{article}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+\usepackage{marvosym} % For cool symbols.
+\usepackage{enumerate}
+\usepackage{pifont}
+\renewcommand\labelitemiii{-}
+\usepackage[margin = 1.150in]{geometry}
+
+\pagestyle{empty}
+
+\newenvironment{tightitem}
+{\begin{itemize}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{itemize}}
+%
+%\newenvironment{tightenumerate}
+%{\begin{enumerate}
+%\setlength{\itemsep}{1pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}}
+%{\end{enumerate}}
+
+\newcommand{\heading}[1]{\item \large \textsc{#1} \normalsize}
+
+\newenvironment{experience}[4]{
+\item \textbf{#1.} \hfill #3 - #4 \\
+\emph{#2}
+}{
+}
+
+\newcommand{\publication}[4]{\item #1. #2. \emph{#3.} #4}
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+    
+
+\begin{document}
+
+\Huge \textbf{Si Chen} \hfill \small
+\begin{tabular}{rl}
+Email   & \href{mailto:schen23@buffalo.edu}{schen23@buffalo.edu} \\
+Web     & \url{http://ubisec.cse.buffalo.edu/sichen.html} \\
+Address & 4285 Chestnut Ridge Road, Apt 1-D, Buffalo, NY\\
+Phone  & (716)-335-8052\\
+\end{tabular}
+
+\normalsize
+
+\begin{description}
+
+\heading{Highlights}
+\begin{itemize}
+\item Strong research background in cyber-physical system security, security and privacy on smart wearable device, mobile security, cloud-assisted mobile sensing and wireless system.
+
+\item Active involvement in the preparation and development of grant proposals submitted to different government agencies and companies, such as NSF and MSR.
+\item Experience in teaching and mentoring both undergraduate and graduate students
+\item Experience in research collaboration in multicultural environments
+\end{itemize}
+
+
+\heading{Research Interests}
+
+%\vspace{0.08in}
+My research interests include cyber-physical system security, wireless system and smartphone-enabled crowdsourcing system,  with current focus on exploring and improving the cloud-assisted mobile sensing security. \\
+
+\heading{Teaching Interests}
+
+I feel confident about lecturing courses in areas of  computer architecture, cyber-physical system security, advanced computer network, cloud computing security, smartphone security, smartphone sensing, and applied cryptography. I am also interested in contributing to new courses and seminars related to security and privacy on smart wearable device, mobile wireless security and crowdsensing system.
+
+%\vspace{0.08in}
+
+
+\heading{Education}
+
+\begin{itemize}
+\item \textbf{University at Buffalo - SUNY, Buffalo, NY, USA} \\
+Ph.D. Candidate in Computer Science and Engineering, starting from August 2012\\
+Advised by Professor Kui Ren
+
+\item \textbf{University at Buffalo - SUNY, Buffalo, NY, USA} \\
+M.S. in Electrical Engineering, May 2012\\
+Thesis: ``Groundwave Modelling and Online Simulation System for Advanced HF Radio Networking" \\
+Advised by Professor Tommaso Melodia
+
+\item \textbf{China Agricultural University, Beijing, China} \\
+B.S. in Measuring \& Control Technology and Instrumentations (School of Engineering), June 2010\\
+\end{itemize}
+
+%
+%\newpage
+
+
+
+
+\heading{Publications}
+
+%As of December, 2015, my works have received \href{http://scholar.google.com/citations?hl=en&user=wRa_lOEAAAAJ}{\underline{total citations over 800 with h-index 11 as seen from Google Scholar.}}
+%For my your particular contribution in the jointly-authored scholarly works, please refer to my attached research statement for detailed information.
+
+
+
+%\publication{\textbf{Cong Wang}, Ning Cao, Kui Ren, and Wenjing Lou}{Enabling Secure and Efficient Ranked Keyword Search over Outsourced Cloud Data} {\textbf{IEEE Transactions on Parallel and Distributed Systems (TPDS)}, 2011} {Accepted for publication.}
+
+
+%\publication{Qian Wang, \textbf{Cong Wang}, Jin Li, Kui Ren, and Wenjing Lou} {Enabling Public Auditability and Data Dynamics for Storage Security in Cloud Computing} {\textbf{IEEE Transactions on Parallel and Distributed Systems (TPDS)}, Vol. 22, No. 5, pp. 847-859, May, 2011}
+%\\ \textbf{Citations $>$ 19.}
+
+%\publication{Kui Ren, \textbf{Cong Wang}, and Qian Wang} {Security Challenges in Public Cloud} {\textbf{IEEE Internet Computing Magazine}, Vol. 16, No. 1, pp. 69-73, Jan/Feb, 2012, \textbf{Invited Paper}}
+
+%IEEE Internet Computing, Vol. 16, No. 1, pp. 69-73, Jan/Feb, 2012, with C. Wang and Q. Wang. (Invited Paper)
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, and Kui Ren} {Enhancing Attribute-based Encryption with Attribute Hierarchy} {\textbf{ACM Mobile Networks and Applications (MONET)}, vol. 16, pp. 553-561, 2010} {}
+
+
+
+
+\textbf{Conference Papers}
+
+\begin{enumerate}[{C-}1.]
+
+\publication{\textbf{Si Chen}, Muyuan Li, Kui Ren, Xinwen Fu, Chunming Qiao} {Rise of the Indoor Crowd: Reconstruction of Building Interior View via Mobile Crowdsourcing}  {\textbf{The 13th ACM Conference on Embedded Networked Sensor Systems (SenSys'15)}, Seoul, South Korea, November 1-4, 2015, \textbf{13-page}} \\
+\textbf{Acceptance ratio} $<$ 20\%.
+
+\publication{\textbf{Si Chen}, Muyuan Li, Kui Ren, Chunming Qiao} {CrowdMap: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos}  {\textbf{The 35th IEEE International Conference on Distributed Computing Systems (ICDCS'15)}, Columbus, Ohio, June 29 - July 2, 2015, pp. 1-10, \textbf{10-page }} {} \\
+\textbf{Acceptance ratio} = 70/543 $=$ 12.89\%.
+
+\publication{Muyuan Li, Haojin Zhu, Zhaoyu Gao, \textbf{Si Chen}, Le Yu, Shangqian Hu, Kui Ren} {All your location are belong to us: Breaking mobile social networks for automated user location tracking}  {\textbf{The 15th ACM international symposium on Mobile ad hoc networking and computing (Mobihoc'14)}, Philadelphia, PA, August 11-14, 2014, pp. 43-52, \textbf{10-page }} \\
+\textbf{Acceptance ratio} = 40/211 $=$ 18.9\%. \textbf{Citations $>$ 22.}
+
+\publication{Eric Koski, \textbf{Si Chen}, Scott Pudlewski, Tommaso Melodia} {Network simulation for advanced HF communications engineering}  {\textbf{The 12th International Conference on Ionospheric Radio Systems and Techniques (IRST'12)} York, UK, May 15-17, 2012, pp. 45, \textbf{5-page }}
+
+\publication{\textbf{Si Chen}, Lina Ling, Yuan Rongchang, Longqing Sun} {Classification Model of Seed Cotton Grade Based on Least Square Support Vector Machine Regression Method}  {\textbf{The 6th IEEE International Conference on Information and Automation for Sustainability (ICIAfS'12)}, Beijing, China, 2012, pp. 198--202, \textbf{4-page}} 
+%\\ \textbf{Acceptance ratio} = 276/1575 = 17.5\%. \textbf{Citations $>$ 86.}
+
+\publication{Rongchang Yuan, Zhengjiang Li, \textbf{Si Chen}} {Movement and deformation of virtual object based on argument passing method}  {\textbf{The IEEE International Conference on Virtual Environments, Human-Computer Interfaces and Measurement Systems (VECIMS'12)}, Tianjin, China, 2012, pp. 103-106, \textbf{5-page}} 
+
+\publication{Rongchang Yuan, \textbf{Si Chen}, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan} {Simulation and Models on Control of Pests with Ozone in Greenhouses Plant}  {\textbf{The IASTED International Conference on Modeling, Simulation, and Identification (MSI'11)}, Pittsburgh, PA, Nov 7-9, 2011, \textbf{5-page}} 
+
+\publication{Rongchang Yuan, HaiganYuan, \textbf{Si Chen}, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma} {Research on the k-coverage local wireless network and its communication coordination mechanism design}  {\textbf{the 5th International Conference on Computer and Computing Technologies in Agriculture (CCTA '11)}, Beijing, China, Oct 29-31, 2011, \textbf{12-page }} 
+
+%\publication{Ning Cao, \textbf{Cong Wang}, Ming Li, Kui Ren, and Wenjing Lou} {Privacy-Preserving Multi-keyword Ranked Search over Encrypted Cloud Data}  {\textbf{The 30th IEEE Conference on Computer Communications (INFOCOM'11)}, Shanghai, China, April 10-15, 2011, pp. 829-937, \textbf{9-page double-column full paper}} {}
+%\\ \textbf{Acceptance ratio} = 291/1823 $<$ 16\%. \textbf{Citations $>$ 20.}
+
+
+%\publication{Ning Cao, Zhenyu Yang, \textbf{Cong Wang}, Kui Ren, and Wenjing Lou}
+%{Privacy-perserving Query over Encrypted Graph-Structured Data in Cloud Computing}
+%{\textbf{The 31st International Conference on Distributed Computing Systems (ICDCS'11)}, Minneapolis, MN, June 20-24, 2011, pp. 393-402, \textbf{10-page double-column full paper}} {}\\
+%\textbf{Acceptance ratio} = 10/76 = 13\% for the track of security and privacy.
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, Ning Cao, Kui Ren, and Wenjing Lou} {Fuzzy Keyword Search over Encrypted Data in Cloud Computing}
+%{\textbf{The 29th IEEE Conference on Computer Communications}, mini-conference (\textbf{INFOCOM'10}), San Diego, CA, March 15-19, 2010, pp. 441-445, \textbf{5-page double-column short paper}}
+%\\ \textbf{Acceptance ratio} = (106+276)/1575 = 24.3\%. \textbf{Citations $>$ 29.}
+
+%\publication{Qian Wang, Kui Ren, \textbf{Cong Wang}g, and Wenjing Lou} {Efficient Fine-grained Data Access Control in Wireless Sensor Networks}  {The 28th International Conference for Military Communications (MILCOM'09), Boston, MA,
+%October 18-21, 2009, pp. 1-7, \textbf{7-page double-column full paper}}{\textbf{Invited.}}
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, and Kui Ren}  {Enhancing Attribute-based Encryption with Attribute Hierarchy} {The 4th International Conference on Communications and Networking in China (ChinaCom'09), Xi'an,
+%China, August 26-28, 2009, pp. 1-5}{\textbf{Best Paper Award.}}
+
+\end{enumerate}
+
+\textbf{Journal and Magazine Articles}
+
+\begin{enumerate}[{J-}1.]
+
+
+
+\publication{Bingsheng Zhang, Qin Zhan, \textbf{Si Chen}, Muyuan Li, Kui Ren, Cong Wang, Di Ma} {PriWhisper: Enabling Keyless Secure Acoustic Communication for Smartphones}
+{\textbf{IEEE Internet of Things Journal (IoT)}, 2014}
+{Accepted for publication. Citations $>$ 10}.
+
+\end{enumerate}
+\textbf{Conference Posters}
+
+%For my your particular contribution in the jointly-authored scholarly works, please refer to my attached research statement for detailed information.
+
+\begin{enumerate}[{P-}1.]
+
+\publication{\textbf{Si Chen}, Muyuan Li, Zhan Qin, Kui Ren} {IndoorCrowd2D: Building Interior View Reconstruction via Mobile Crowdsourcing}
+{The IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2015}{}
+
+\publication{\textbf{Si Chen}, Muyuan Li, Kui Ren} {The power of indoor crowd: Indoor 3D maps from the crowd}
+{the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2014}{}
+
+\publication{\textbf{Si Chen}, Muyuan Li, Zhan Qin, Bingsheng Zhang, Kui Ren} {AcousAuth: An acoustic-based mobile Application for user authentication}
+{the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2014}{}
+
+\publication{Muyuan Li, \textbf{Si Chen}, Kui Ren} {Enabling private and non-intrusive smartphone calls with LipTalk}
+{the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2014}{}
+
+\end{enumerate}
+
+\textbf{Papers Under Submission}
+\begin{enumerate}[{U-}1.]
+\publication{\textbf{Si Chen}, Sixu Piao, Cong Wang, Qian Wang, Kui Ren} {You Can Hear But You Cannot Steal: Defending against Voice Impersonation Attacks on Smartphones}  {\textbf{The 14th ACM International Conference on Mobile Systems, Applications, and Services (MobiSys'16)}, Singapore} \\
+
+\publication{\textbf{Si Chen}, Kui Ren, Xinwen Fu, Chunming Qiao} {IndoorCrowd2D: Building Interior View Reconstruction via Mobile Crowdsourcing}
+{\textbf{IEEE Trans. on Parallel and Distributed Systems (TPDS)}, 2016}\\
+
+\publication{\textbf{Si Chen}, Kui Ren, Su Lu, Chunming Qiao} {The power of indoor crowd: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos}
+{\textbf{IEEE Trans. on Mobile Computing (TMC)}, 2016}\\
+
+%\publication{Kui Ren, \textbf{Si Chen}, Xinwen Fu, Chunming Qiao} {The power of indoor crowd: Indoor interior view scene reconstruction from the crowd}
+%{\textbf{IEEE Network Magazine}, 2016}
+%For my your particular contribution in the jointly-authored scholarly works, please refer to my attached research statement for detailed information.
+
+
+
+\end{enumerate}
+
+\heading{Research Experiences}
+
+\begin{itemize}
+
+\begin{experience}
+{Ubiquitous Security and Privacy Research Laboratory}
+{Research Assistant}
+{Jan. 2013}{Present}
+\begin{itemize}
+
+
+\item \textbf{AcousAuth.} \\
+This project aims at developing a \textbf{highly secure alternative NFC system} based on friendly jamming technique for acoustic short-range communication. 
+\begin{itemize}
+
+\item Proposed an alternative NFC technique which provides NFC-like functionalities commercial smartphone applications, and enables much stronger security guarantees but requires less strict hardware support. 
+\item Designed a smartphone empowered system for personal authentication featuring
+a seamless, faster, easier and safer authentication process without the need of special
+infrastructure.
+\item Shortlisted in the 19th Annual International Conference on Mobile Computing and Networking (ACM Mobicom'13) App Competition \href{http://www.sigmobile.org/mobicom/2013/app_finalists.html}{\textbf{\underline{(Top 10)}}}.
+\end{itemize}
+
+
+\item \textbf{FreeTrack: Tracking Mobile Social Network Users.} \\
+This project serves as a \textbf{critical security reminder} of the current LBSNs pertaining to a vast number of users. 
+\begin{itemize}
+
+\item Identified severe location privacy leaks from popular location based social networks (e.g. Momo,
+Skout and Wechat) that allows non-priviledged attacker to effectively pinpoint users' locations and even
+performed long-term tracking to reveal identity. 
+
+\item Developed an automated user location tracking system
+and tested it on the these LBSNs. 
+\item Demonstrated its effectiveness and efficiency via a 3 week real-world
+experiment with 30 volunteers.
+\item The evaluation results showed that this system can geo-locate a target with high
+accuracy and can readily recover users' Top 5 locations. 
+\item Proposed using grid reference system
+and location classification to mitigate the attacks.
+\end{itemize}
+\end{itemize}
+%Both research results and paper submission by PARC.
+\item \textbf{IndoorCrowd}\\
+This project is \textbf{the first to propose, design and implement} a smartphone-based crowdsourcing system that explores the power of untrained individuals to generate building interior views at scale. It \textbf{breaks away from established approaches} to reconstruct indoor scenes, and explores an advanced architecture based on crowdsourcing and mobile-sensing.
+\begin{itemize}
+
+\item Proposed a low-cost crowdsource-based method to reconstruct indoor floor plan that by utilizing sensor-rich video data from mobile users.
+\item Innovatively exploited the sequential relationship between consecutive
+frames to improve system performance.
+\item Achieved a significant improvement of accuracy compared with other indoor scene reconstruction systems, according to a long-term real-world experiment on 30 volunteers. 
+\item Readily deployable in real-world scenarios. It is also expected to extend existing online map services (e.g. Google Map) to the indoor environments at an unprecedented scale, which is currently cost prohibitive. 
+\item Served as an important stepping stone towards economically-viable massive indoor 3D model reconstruction. 
+\end{itemize}
+
+\end{experience}
+
+\begin{experience}
+{Wireless Networks and Embedded Systems Laboratory}
+{Research Assistant}
+{2011}{May. 2012}
+\begin{itemize}
+\item \textbf{Ground Wave Simulator.}\\
+The aim of this project is to \textbf{accomplish an online simulation system based on NS-2} open source network simulator to simulate advanced high frequency (HF) network, so as to be useful for analyzing HF radio networks under real-world conditions. 
+\begin{itemize}
+\item Studied models of HF channel characteristics, waveforms, protocols, and typical traffic loads.
+\item Designed an online simulation system to calculate the electric field strength and basic path loss in the real-world environment.
+\item Implemented an online ground wave simulation system based on NS-2 open source network simulator, GRWAVE and VOACAP Software to simulate advanced high frequency (HF) network.
+\end{itemize}
+
+
+\item \textbf{Relay-Assisted D-OFDM for Cognitive Radio Networks.}\\
+The aim of this project is to \textbf{improve the throughput of the network} by using a relay-assisted D-OFDM algorithm and resource allocation algorithm.
+\begin{itemize}
+\item Implemented an relay-assisted D-OFDM and resource allocation algorithm to improve the throughput of the network.
+\item Implemented TCP/IP protocol into GNU Radio testbed USRP2.
+\item Established bridge and framework abstraction for cognitive radio framework.
+\end{itemize}
+%This project aims at deploying the most fundamental data services including data utilization, data sharing, and data storage on the commercial public cloud, with built-in security and privacy assurance as well as high level data service performance, system usability, and scalability.
+%
+%In particular, our preliminary works have explored techniques on secure similarity search [C-1,C-13] and ranked search [C-4, J-2] over encrypted cloud data, scalable and owner-controlled cloud data sharing [C-8, C-10], as well as privacy-preserving third-party auditing for cloud storage correctness [C-5, J-1] with support of data dynamics [C-9, J-5] and batch auditing [J-1]. The early drafts of these papers contributed to the success of the research proposal for the NSF CAREER Award CNS-1054317: ``CAREER: Secure and Privacy-assured Data Service Outsourcing in Cloud Computing, National Science Foundation".
+%\item \textbf{Project} Engineering Secure Data Computation Outsourcing in Cloud Computing.\\
+%This projects aims at enabling end-users with limited computational resources to outsource large-scale computational tasks to cloud, while protecting their sensitive workload information and ensuring the integrity of the computation results returned from the cloud.
+%
+%Our preliminary works have explored mechanism designs for secure outsourcing widely applicable engineering computing and optimization problems, including linear programming [C-3] and large-scale systems of linear equations [C-2]. The designs are demonstrated as practically feasible on both user and cloud side, preserve input/out privacy, ensure the cheating resilience, and more importantly bring significant computational savings for users. The early drafts of my papers [C-2,C-3] served the basis of the research proposal for the NSF Grant Award CSR-1116939: ``Engineering Secure Data Computation Outsourcing in Cloud Computing".
+
+
+
+\end{itemize}
+
+
+
+
+%The early drafts of my paper [C1,C2] serves the basis of the NSF Grant Award CSR-1117111: ``Engineering Secure Data Computation Outsourcing in Cloud Computing". The early drafts of my paper [C4,C6-C10,J1,J2] serves the basis of the NSF Grant Award CNS-1054317: ``CAREER: Secure and Privacy-assured Data Service Outsourcing in Cloud Computing, National Science Foundation".
+\end{experience}
+
+\begin{experience}
+{National University Student Innovation Program}
+{Research Assistant}
+{2009}{May. 2010}
+\begin{itemize}
+\item \textbf{Intellectualized Greenhouse Measuring \& Control System.}\\
+This project aims at \textbf{developing a greenhouse management system} using wireless sensor network.
+\begin{itemize}
+		\item{Designed a mathematical model specialized for simulating greenhouse environment.}
+		\item{Used CC2430 wireless node and Zigbee stack (Z-stack) to measure and control a greenhouse model's humidity and temperature.}
+		\item{Used Python, PHP, Javascript (jQuery), MySQL and C to create a realtime B/S System.}
+		\item{Designed a PCB with controllers that can use CC2430 with computer to remote control the greenhouse model.}
+		%\item{Implemented PHP reflection mechanism to create a plugin system for further system enhancement.}
+\end{itemize}
+\end{itemize}
+\end{experience}
+%\begin{experience}
+%{Illinois Institute of Technology}
+%{Research Assistant}
+%{August 2008}{Present}
+%I have actively involved in the research projects on secure and privacy-assured data service outsourcing in cloud, including: secure and practical outsourcing of engineering and optimization computation, privacy-preserving cloud storage correctness auditing, secure and effective encrypted cloud data utilization, and scalable and owner-controlled cloud data sharing.
+%The early drafts of my paper [C1,C2] serves the basis of the NSF Grant Award CSR-1117111: ``Engineering Secure Data Computation Outsourcing in Cloud Computing". The early drafts of my paper [C4,C6-C10,J1,J2] serves the basis of the NSF Grant Award CNS-1054317: ``CAREER: Secure and Privacy-assured Data Service Outsourcing in Cloud Computing, National Science Foundation".
+%\end{experience}
+
+%
+%In 2004, investigated tradeoffs between communication and computation
+%encountered when distributing a parallel problem with nearest neighbor
+%connectivity across a grid using a shared whiteboard for
+%communication. The following summer, developed a distributed,
+%agent-based simulator which allows the modeling of the spread of
+%infectious disease at the national level.
+%\end{experience}
+%
+%\begin{experience}
+%{CS Dept. of UW Madison, CIPART Project}
+%{Research Assistant}
+%{January 2004}{May 2005}
+%Worked on a research project investigating the potential utility of
+%exchanging security log data between network administration sites and
+%conducted an investigation of an attack on networks for log sharing.
+%Gave talks on this work at the Army Research Office workshops on
+%critical infrastructure protection in May 2004 and June 2005.
+%Presented a paper on the discovered attack at the USENIX Security
+%2005, where it won the best paper award.
+%\end{experience}
+%
+%\begin{experience}
+%{IBM, Extreme Blue Program}
+%{Computer Science Intern}
+%{June 2003}{August 2003}
+%Participated in Extreme Blue internship program at the Almaden
+%Research Center. Designed and implemented system which applied grid
+%computing to massively multiplayer online games with two other
+%students. Presented results to CEO Sam Palmissano. Project was
+%featured at the 2003 LinuxWorld, and in Technology Review, eWeek, and
+%Slashdot. Coauthored a paper on this work which appeared in the IBM
+%Systems Journal.
+%\end{experience}
+%
+%\begin{experience}
+%{CS Dept. of UW Madison, Condor Project}
+%{Project Assistant}
+%{January 2002}{March 2003}
+%Implemented research work in the field of high throughput distributed
+%computing using C, C++, and Perl. Partially designed a sub-system for
+%running parallel programs on distributed resources.
+%\end{experience}
+
+\end{itemize}
+
+\heading{Teaching Experience}
+
+%\begin{itemize}
+
+%\begin{experience}
+%{Dec/5}
+%{Member}
+%{September 2005}{May 2006}
+%Helped to organize and run social events for the faculty and students
+%of the CMU School of Computer Science.
+%\end{experience}
+
+%\begin{experience}
+%{Undergraduate Projects Laboratory}
+%{Coordinator}
+%{January 2001}{May 2005}
+%Helped to organize and run a computer club for undergraduates at the
+%University of Wisconsin. Responsible along with the other coordinators
+%for planning projects, giving tutorials, helping direct the operation
+%of the UPL, and systems administration of a network of about a dozen
+%machines, several hundred user accounts, and a variety of servers
+%(NFS, web, mail, DNS, etc.).
+%\end{experience}
+
+%\end{itemize}
+
+\begin{itemize}
+\item \textbf{Guest Lecturer} for the graduate course CSE 664 \emph{Applied Cryptography and Computer Security}, Spring 2014/2015, CSE 706 \emph{Selected Topics in Privacy and Security}, Fall 2015, \emph{Sensing, Crowdsourcing with Smartphones and Wearable Devices}, Fall 2014, \emph{Security and Privacy in Emerging Applications}, Fall 2013, \emph{Advanced Topics on Privacy Enhancing Technologies}, Fall 2012 and the undergraduate course CSE 241 \emph{Digital Systems}, Spring 2013.
+\\
+Gave guest lectures with security related topics ranging from: web security, cyber-physical system security, security and privacy on smart wearable device, mobile wireless security, smartphone security and malicious software.
+\item \textbf{Teaching Assistant} for the graduate course CSE 664 \emph{Applied Cryptography and Computer Security}, Spring 2014/2015.
+\\
+Developed all the course projects including video privacy for public IP camera. Led the quiz
+reviews and Q\&A sessions for a class of 40 students, and graded the project reports.
+\item \textbf{Lab Assistant} for the undergraduate course CSE 241 \emph{Digital Systems}, Spring 2013.
+\\
+Led quiz reviews and answered questions for a class of 80 students.
+%\item \textbf{Lab Assistant} for the undergraduate course ECE 311 \emph{Engineering Electronics}, Spring 2009.
+%\\
+%Led 8 lab sessions for 16 students, answered their questions, and graded the lab reports.
+\end{itemize}
+
+\heading{Professional Activities}
+
+\begin{itemize}
+%\item \textbf{Technical Program Committee Member} for IEEE Military Communications Conference (IEEE MILCOM 2012), and IEEE Global Communications Conference (IEEE Globecom 2012).
+
+\item \textbf{Conference Reviewer} for ICCCN'16, ACM CCS'15, ICDCS'15, ESORICS'15, AsiaCCS'15, Cloud'15, ICCCN'15, DBSec'15, CoudCom'15, ACM CHI'15, CloudNet'15, ISC'15, Securecomm'15, IEEE MSN'15, IPCCC'15, INFOCOM'14, ACM CCS'14, ICDCS'14, ESORICS'14, ICNP'14, AisaCCS'14, MobiHoc'14, CNS'14, CloudNet'14,DBSec'14, SecureComm'14.
+\item \textbf{Journal Reviewer} for IEEE Trans. on Parallel and Distributed Systems, IEEE Trans. on Services Computing, IEEE Trans. on Smart Grid, IEEE Trans. on Vehicular Technology, IEEE Trans. on Wireless Communications, IEEE Security \& Privacy magazine, IEEE Network Magazine, Journal of Computer Security, Journal of Mobile Communication, Computation and Information, Journal of Parallel and Distributed Computing.
+
+%(total 35 venues)
+
+\item \textbf{Webchair} for the 27th IEEE Annual Computer Communications Workshop (CCW'13).
+
+%\item \textbf{Student Volunteer} for ACM Conference on Computer and Communications Security, CCS 2009$\sim$2011.
+\end{itemize}
+
+%{\small (grad)}
+%\vspace{-2mm}
+%\begin{tightitem}
+%\item NSF Graduate Research Fellowship, 2006
+%\item NDSEG Fellowship, 2006
+%\end{tightitem}
+%{\small (undergrad)}
+%\vspace{-2mm}
+%\begin{tightitem}
+%\item Best Paper, USENIX Security 2005
+%\item Dowling Prize, 2005 {\footnotesize (UW Math Dept.)}
+%\item Fred W. and Josephine Colbeck Scholarship, 2004 {\footnotesize (UW ECE Dept.)}
+%\item Robert Mensel Scholarship, 2003 {\footnotesize (UW ECE Dept.)}
+%\item Richard H. Thomas Family Distinguished Scholarship, 2002 {\footnotesize (UW ECE Dept.)}
+%\item Henry Vilas Scholarship, 2000 {\footnotesize (UW)}
+%\item Kemper K. Knapp Scholarship, 2000 {\footnotesize (UW)}
+%\item Freshman Engineering Scholarship, 2000 {\footnotesize (UW College of Engr.)}
+%\end{tightitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\heading{References}
+%Available upon request.
+%
+%\begin{table*}[h]
+%\renewcommand{\arraystretch}{1.0}
+%\centering
+%%    \caption{}     % NOTE!  caption goes _before_ the table contents !!
+%%    \begin{small}
+%\begin{tabular}{lll}
+%\textbf{Professor Kui Ren} &   \textbf{Professor Jia Wang}  &  \textbf{Professor Wenjing Lou}    \\
+%    Department of ECE      &   Department of ECE   &     Department of ECE   \\
+%Illinois Institute of Technology       &  Illinois Institute of Technology      & Worcester Polytechnic Institute    \\
+%    Siegal Hall, Room 319 & Siegal Hall, Room 317  & Atwater Kent, Room 303 \\
+% 3301 S. Dearborn St.,  & 3301 S. Dearborn St.,  &   100 Institute Road,\\
+% Chicago, IL 60616 &   Chicago, IL 60616 & Worcester, MA 01609-2280 \\
+%    (312) 567 3481 &   (312) 567 3696  &  (508) 831 5338 \\
+%\href{mailto:kren@ece.iit.edu}{kren@ece.iit.edu}  & \href{mailto:jwang@ece.iit.edu}{jwang@ece.iit.edu}   &  \href{mailto:wjlou@ece.wpi.edu}{wjlou@ece.wpi.edu}
+%    \end{tabular}
+%%    \end{small}
+%\end{table*}
+
+%
+%\begin{itemize}
+%\item \textbf{Professor Kui Ren}\\
+%Department of ECE\\
+%Illinois Institute of Technology\\
+%Siegal Hall, Room 319\\
+%3301 S. Dearborn St.,\\
+%Chicago, IL 60616 \\
+%(312) 567 3481\\
+%\href{mailto:kren@ece.iit.edu}{kren@ece.iit.edu}
+%\end{itemize}
+%
+%\begin{itemize}
+%\item \textbf{Professor Wenjing Lou}\\
+%Department of ECE\\
+%Worcester Polytechnic Institute\\
+%Atwater Kent, Room 303\\
+%100 Institute Road,\\
+%Worcester, MA 01609-2280\\
+%(508) 831 5338\\
+%\href{mailto:wjlou@ece.wpi.edu}{wjlou@ece.wpi.edu}
+%
+%\item \textbf{Professor Jia Wang}\\
+%Department of ECE\\
+%Illinois Institute of Technology\\
+%Siegal Hall, Room 317\\
+%3301 S. Dearborn St.,\\
+%Chicago, IL 60616 \\
+%(312) 567 3696\\
+%\href{mailto:jwang@ece.iit.edu}{jwang@ece.iit.edu}
+%
+%\end{itemize}
+
+%\begin{itemize}
+%\item \textbf{Professor Xiangyang Li}\\
+%Department of Computer Science\\
+%Illinois Institute of Technology\\
+%Stuart Building, Room 237D\\
+%10 W. 31st Street,\\
+%Chicago, IL, 60616\\
+%(312) 567 5207\\
+%\href{mailto:xli@cs.iit.edu}{xli@cs.iit.edu}
+%\end{itemize}
+
+\heading{Graduate Coursework}
+
+Computer Architecture, Applied Cryptography and Computer Security, Wireless Network Security, Theory of Computation, Modern Network Concept, Wireless Networking and Mobile Computing, Multimedia Wireless Sensor Network, Principle of Information Theory and Coding, Operating Systems, Optimization of Wireless Network, Computer Vision and Image Processing, High Performance Computing, Multimedia Systems, Analog Circuits, Biomems \& Lab-On-a-Chip, Algorithms Analysis and Design, Consumer Optoelectronics\\
+\heading{Honors and Awards}
+
+%Congratulations! You have been awarded the Graduate College Dean's Fellowship for study in the Electrical Engineering program at Illinois
+%Institute of Technology for the 2007-08 academic year. This fellowship covers one-half of the full-time graduate tuition for a maximum of nine
+%credit hours per semester, amounting to $7,002 for the academic year.
+
+\begin{tightitem}
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5888673} {\underline{No. 1 top accessed}} INFOCOM'11 article ``Secure and practical outsourcing of linear programming in cloud computing" in IEEE Xplore as of September, 2011 (1 out of 291 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5461675}{\underline{No. 1 top accessed}} INFOCOM'10 article ``Privacy-preserving Public Auditing for Storage Security in Cloud Computing" in IEEE Xplore as of May, 2011 (1 out of 276 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5541617}{\underline{No. 1 top accessed}} ICDCS'10 article ``Secure Ranked Keyword Search Over Encrypted Cloud Data" in IEEE Xplore as of May, 2011. (1 out of 84 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=71}{\underline{No. 1 top accessed}} IEEE TPDS article ``Enabling Public Auditability and Data Dynamics for Storage Security in Cloud Computing" in IEEE Xplore as of September, 2011.
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=4236}{\underline{No. 1 top accessed}} IEEE Internet Computing article ``Security Challenges for the Public Cloud" in IEEE Xplore as of January, 2012.
+\item The 19th Annual International Conference on Mobile Computing and Networking (ACM Mobicom'13) App Competition Finalists (top 10), 2013
+\item Student Travel Grant Awards, IEEE ICDCS 2015
+\item Top 100 Excellent Graduate Theses in China Agricultural University, 2010
+\item  Excellent Graduate Award in China Agricultural University, 2010
+\item   National University Student Innovation Program Award, 2009-2010
+\item  Undergraduate Research Program Award, 2007-2008
+\item Third Prize of International Interdisciplinary Contest in Modeling (ICM), 2009
+\item  Third Prize of Scholarship for Excellent Academic Performance, 2007, 2008, 2009
+\item Awarded ``The best debater"  title in debate competitions, 2006, 2007
+%\item Graduate College Dean's Fellowship, IIT, August 2008.
+%\item Scholarship of Wuhan University for Graduate Student, 2006
+%\item Scholarship of Wuhan University, Excellent Student Award, 2001$\sim$2004\\
+\end{tightitem}
+
+
+\end{description}
+\end{document}

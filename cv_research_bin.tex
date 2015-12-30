@@ -1,0 +1,321 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[a4paper, 11pt]{article}
+
+
+
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+%Fonts and Tweaks for XeLaTeX
+\usepackage{fontspec}% provides font selecting commands 
+\usepackage{xunicode}% provides unicode character macros 
+\usepackage{xltxtra} % provides some fixes/extras
+\defaultfontfeatures{Scale=MatchLowercase}
+%\setmainfont[Mapping=tex-text]{Calibri}
+%\setmainfont[Mapping=tex-text]{Qlassik Medium}
+%\setmainfont[Mapping=tex-text]{Gill Sans MT}
+\setmainfont[Mapping=tex-text]{Trebuchet MS}
+\newfontfamily\notefont{Times}
+\newfontfamily\texfont{Baskerville}
+%\setsansfont[Mapping=tex-text]{Skia}
+%\setmonofont{Courier}
+%-----------------------------------------------------------
+
+\usepackage{url}
+\usepackage{hyperref}
+
+
+%\usepackage{fullpage}
+\usepackage{textcomp}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+\usepackage[svgnames]{xcolor}           % xcolor package
+\definecolor{shadecolor}{gray}{0.90}    % Background color of section bars
+%Styling Itemizations
+
+\usepackage{pifont}
+\usepackage{bbding}
+\renewcommand{\labelitemi}{*}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+
+\newcommand{\ressection}[1]
+{\fcolorbox{black}{shadecolor}{\vbox{\hsize 0.98\textwidth \textbf{\mbox{~}{\@ \large #1} \vphantom{p\^{E}}}}}}
+ 
+% Usage : ressubsection{item1}{comment1}{item2}{comment2}
+\newcommand{\ressubsection}[4]
+{
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}
+}
+ 
+% Usage : resrowitemlr{item}{comment}
+\newcommand{\resrowitemlr}[2]
+{
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
+    \textbf{#1} & #2 \\
+\end{tabular*}
+}
+ 
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large \fontsize{26}{26} {\notefont Si Chen}}  & \Phone\@ (716)335-8052\\
+Davis 301, University at Buffalo & \Envelope\@  schen23@buffalo.edu \\
+Amherst, NY &  \url{http://www.quake0day.com/me/} \\
+\end{tabular*}
+\\
+\vspace{0.1in}
+
+\ressection{Education}
+\begin{itemize}
+\item
+	\ressubheading{University at Buffalo - SUNY}{Buffalo, NY}{Ph.D., Computer Science and Engineering}{Sep. 2012 - May. 2016}
+	\begin{itemize}
+		\resitem{Research Assistance in Ubiquitous Security and Privacy Research Laboratory
+(UbiSeC Lab), \\ 
+Advisor: Dr. Kui Ren}
+		\resitem{Relevant courses: Operating Systems, Computer Architecture, Multimedia Systems, Computer Vision and Image Processing, High Performance Computing, Algorithms Analysis and Design, Applied Cryptography and Computer Security, Wireless Network Security, Theory of Computation, Modern Network Concept, Wireless Networking and Mobile Computing,  }
+	\end{itemize}
+	
+\item
+	\ressubheading{University at Buffalo - SUNY}{Buffalo, NY}{M.S., Electrical Engineering}{Sep. 2010 - May. 2012}
+	\begin{itemize}
+	\resitem{Research Assistance in Wireless Networks and Embedded Systems Lab (WINES Lab), \\
+	 Advisor: Dr. Tommaso Melodia}
+		\resitem{Relevant courses: Multimedia Wireless Sensor Network, Principle of Information Theory and Coding, Optimization of Wireless Network, Analog Circuits, Biomems \& Lab-On-a-Chip, Consumer Optoelectronics}
+	\end{itemize}
+
+\item
+	\ressubheading{China Agricultural University}{Beijing, China}{B.S., Measuring \& Control Technology and Instrumentations}{2006-2010}
+	\begin{itemize}
+		\resitem{Graduated with Honors, Top 100 Excellent Graduate Theses award winner}
+		\resitem{Relevant courses: Application of MATLAB, C Programming Language, Principles of Microcomputer and Interface Technology, Signal Processing, Sensor and Detecting circuits, Practical Image Processing, Computer Measurement \& Control Technology, Principle \& Application of Single Chip Microcomputer}
+	\end{itemize}
+
+\end{itemize}
+
+
+\ressection{Projects}
+
+\begin{itemize}
+\item
+	\ressubheading{IndoorCrowd: Mapping of indoor building structures through mobile devices}{}{Project Leader, 
+UbiSeC Lab}{Jun. 2013 - Present}
+	\begin{itemize}
+	\resitem{GitHub: github.com/kkspeed/FreeTrack}
+		\resitem{Proposed a low-cost crowdsource-based method to reconstruct indoor floor plan that utilize sensor-rich video data from mobile users. }
+\resitem{Innovatively exploited the sequential relationship between consecutive
+frames to improve system performance. Our experiments in three college buildings demonstrate
+that we achieve a hallway shape precision of 88\%. }
+	\end{itemize}
+
+
+\item
+	\ressubheading{AcousAuth}{Buffalo, NY}{Project Leader, Ubiquitous Security and Privacy Research Laboratory
+(UbiSeC Lab)}{Jun. 2013 - Oct. 2013}
+	\begin{itemize}
+		\resitem{AcousAuth is a smartphone empowered system we designed for personal authentication featuring
+a seamless, faster, easier and safer user authentication process without the need for special
+infrastructure. }
+                 \resitem{Winner of the 19th Annual International Conference on Mobile Computing and Networking (MobiCom'13) App Competition Finalists (top 10).}
+	\end{itemize}
+
+\item
+	\ressubheading{FreeTrack: Tracking Mobile Social Network Users}{Buffalo, NY}{Ubiquitous Security and Privacy Research Laboratory
+(UbiSeC Lab)}{Feb. 2013 - Oct. 2013}
+	\begin{itemize}
+		\resitem{Identified severe location privacy leaks from popular location based social networks (e.g. Momo,
+SKout and Wechat) that allows non-priviledged attacker to effectively pinpoint users? locations and even
+perform long-term tracking to reveal identity. }
+                 \resitem{Developed an automated user location tracking system
+and test it on the these LBSNs. We demonstrate its effectiveness and efficiency via a 3 week real-world
+experiment with 30 volunteers.}
+  \resitem{The evaluation results showed that we can geo-locate a target with high
+accuracy and can readily recover users' Top 5 locations. We also proposeed to use grid reference system
+and location classification to mitigate the attacks.}
+	\end{itemize}
+	
+	
+\item
+	\ressubheading{Ground Wave Simulator}{Buffalo, NY}{Project Leader, Wireless Networks and Embedded Systems Laboratory (WINES Lab)}{2011 - May. 2012}
+	\begin{itemize}
+		\resitem{Implemented an online ground wave simulation system based on NS-2 open source network simulator, GRWAVE and VOACAP Software to simulate advanced high frequency (HF) network.}
+	\end{itemize}
+	
+%\item
+	%\ressubheading{Cognitive Radio Framework}{Buffalo, NY}{Wireless Networks and Embedded Systems Laboratory (WINES Lab)}{2011 - Jan. 2012}
+	%\begin{itemize}
+	%	\resitem{Implemented TCP/IP protocol into GNU Radio testbed USRP2}
+	%	\resitem{GNU Radio co-operative setup}
+		%\resitem{Establish Bridge and framework abstraction for the cognitive radio framework}
+	%\end{itemize}
+	
+\item
+	\ressubheading{Intellectualized Greenhouse Measuring \& Control System}{Beijing, China}{Project Leader, National University Student Innovation Program}{2009 - May. 2010}
+	\begin{itemize}
+		\resitem{Used CC2430 wireless node and Zigbee stack (Z-stack) to measure and control a greenhouse model's humidity and temperature.}
+		\resitem{Used Python, PHP, Javascript (jQuery), MySQL and C to create a realtime B/S System.}
+		\resitem{Designed a PCB with controllers that can use CC2430 with computer to remote control the greenhouse model.}
+		\resitem{Designed and built a greenhouse model.}
+		\resitem{Implemented PHP reflection mechanism to create a plugin system for further system enhancement.}
+	\end{itemize}
+
+
+
+%\item
+%Rongchang Yuan, Si Chen, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan ,\emph{"Simulation and Models on Control of Pests with Ozone in Greenhouses Plant,"} in \textbf{ IASTED International Conference on Modelling, Simulation, and Identification (MSI'2011)}, Pittsburgh, USA, November 2011.
+%\item
+%Rongchang Yuan, HaiganYuan, Si Chen, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma,\emph{"Research on the k-coverage local wireless network and its communication coordination mechanism design,"} in \textbf{the Fifth International Conference on Computer and Computing Technologies in Agriculture (CCTA2011)}, Beijing, China, October 2011
+\end{itemize}
+
+
+\ressection{Selected Publications}
+\begin{itemize}
+\item 
+\textbf{Si Chen}, Muyuan Li, Kui Ren, Xinwen Fu, Chunming Qiao, \emph{``Rise of the Indoor Crowd: Reconstruction of Building Interior View via Mobile Crowdsourcing,"} in \textbf{Proceedings of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys),} 2015.
+\item 
+\textbf{Si Chen}, Muyuan Li, Kui Ren, Chunming Qiao, \emph{``CrowdMap: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos,"} in \textbf{Proceedings of the 35th IEEE International Conference on Distributed Computing Systems (ICDCS),} 2015.
+%\item
+%Si Chen, Muyuan Li, Zhan Qin, Kui Ren, \emph{``IndoorCrowd2D: Building Interior View Reconstruction via Mobile Crowdsourcing, "} in \textbf{Proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS),} 2015.
+\item 
+Muyuan Li, Haojin Zhu, Zhaoyu Gao, \textbf{Si Chen}, Le Yu, Shangqian Hu, Kui Ren ,\emph{``All your location are belong to us: Breaking mobile social networks for automated user location tracking,"} in \textbf{Proceedings of the 15th ACM international symposium on Mobile ad hoc networking and computing (Mobihoc),} 2014.
+\item 
+Bingsheng Zhang, Qin Zhan, \textbf{Si Chen}, Muyuan Li, Kui Ren, Cong Wang, Di Ma, \emph{``PriWhisper: Enabling Keyless Secure Acoustic Communication for Smartphones,"} in \textbf{IEEE Internet of Things Journal,} 2014.
+\item 
+Eric Koski, \textbf{Si Chen}, Scott Pudlewski, Tommaso Melodia, \emph{"Network simulation for advanced HF communications engineering,"} in \textbf{Proceedings of the 12th International Conference on Ionospheric Radio Systems and Techniques (IRST),} 2012.
+\item 
+\textbf{Si Chen}, Lina Ling, Yuan Rongchang, Longqing Sun, \emph{"Classification Model of Seed Cotton Grade Based on Least Square Support Vector Machine Regression Method,"} in \textbf{Proceedings of the 6th IEEE International Conference on Information and Automation for Sustainability (ICIAfS),} 2012.
+%\item 
+%Rongchang Yuan, Zhengjiang Li, Si Chen, \emph{"Movement and deformation of virtual object based on argument passing method,"} in \textbf{Proceedings of the IEEE International Conference on Virtual Environments, Human-Computer Interfaces and Measurement Systems (VECIMS'12),} 2012.
+%\item
+%Rongchang Yuan, Si Chen, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan, \emph{"Simulation and Models on Control of Pests with Ozone in Greenhouses Plant,"} in \textbf{Proceedings of the IASTED International Conference on Modelling, Simulation, and Identification (MSI'2011),} 2011.
+%\item
+%Rongchang Yuan, HaiganYuan, Si Chen, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma, \emph{"Research on the k-coverage local wireless network and its communication coordination mechanism design,"} in \textbf{Proceedings of the 5th International Conference on Computer and Computing Technologies in Agriculture (CCTA 2011)}, 2011
+\end{itemize}
+
+
+\ressection{Previous Work Experience and Internships}
+\begin{itemize}
+\item
+	\ressubheading{University at Buffalo - SUNY}{Buffalo, US}{Research Assistant}{Aug. 2013 - Current}
+	\begin{itemize}
+		\resitem{Under the supervision of Dr. Kui Ren. My research topics focus on exploring and improving the cloud-assisted mobile sensing system. }
+	%	\resitem{Designed and implemented an algorithm to calculate daily hottest words from Weibo (Chinese twitter) search log in Python}
+	%	\resitem{Created an usage frequency indicator to show Weibo's  current usage frequency in different areas using Python, C, PHP with MySQL, Javascript }
+	 \end{itemize}
+\item
+	\ressubheading{Sina Weibo (China)}{Beijing, China}{Application Dev Engineer (Internship)}{Apr. 2010 - July. 2010}
+	\begin{itemize}
+		\resitem{Used Python (Matplotlib), Javascript (jQuery) and PHP with MySQL to build an UNIX cluster administration system}
+	%	\resitem{Designed and implemented an algorithm to calculate daily hottest words from Weibo (Chinese twitter) search log in Python}
+		\resitem{Created an usage frequency indicator to show Weibo's  current usage frequency in different areas using Python, C, PHP with MySQL, Javascript }
+	\end{itemize}
+\item
+	\ressubheading{ASSE/WH China}{Beijing, China}{Website Developer and Website Administrator (Part-time job)}{Oct. 2007- Feb. 2008}
+		\begin{itemize}
+		\resitem{Re-constructed company's website using Mambo CMS System}
+		\resitem{Built an online registration system using PHP and MySQL}
+	\end{itemize}
+%\item
+	%\ressubheading{ASSE/WH China}{Beijing, China}{Website Developer and Website Administrator (Part-time job)}{Oct. 2007- Feb. 2008}
+	%\begin{itemize}
+		%\resitem{Re-constructed company's website using Mambo CMS System}
+		%\resitem{Built an online registration system using PHP and MySQL}
+	%\end{itemize}
+
+
+\end{itemize}
+
+\ressection{Extracurriculum Works}
+	\begin{itemize}
+		\resitem{Used SigOps uBoot System (UIUC), C, Assembly to create my own operating system \textquotesingle Quake\textquotesingle }
+		\resitem{Used Python, MySQL to create a program which helps me to increase Weibo followers automatically}
+		\resitem{Used Python, jQuery, PHP, MySQL to build an on-line GPA Calculate System}
+		\resitem{Used Python, C++, Sed, PHP, MySQL and Javascript to design an Automatic Tests Score SMS Notifier}
+		\resitem{Used CC2430 wireless single chip microcomputer and TinyOS embedded system, PHP, MySQL, C, Shell Script to create an Amphibian \& Reptiles Aquarium Monitoring System}
+		\resitem{Used Google Map API, Javascript, HTML to design an on-line alumni catalog}
+		\resitem{Co-founder and technique advisor of the Future Engineers Association (FEA) }
+	\end{itemize}
+	
+\ressection{Honors and Awards}
+
+	\begin{tabular*}{6.7in}{l@{\extracolsep{\fill}}r}
+	\\
+		\@ \@  \@ \@ \@ \@  \@ \@ Top 100 Excellent Graduate Theses in China Agricultural University & 2010\\
+		\@ \@  \@ \@ \@ \@  \@ \@    Excellent Graduate Award in China Agricultural University & 2010\\
+		\@ \@  \@ \@ \@ \@  \@ \@     National University Student Innovation Program Award (\$3200) & 2009-2010\\
+		\@ \@  \@ \@ \@ \@  \@ \@    Undergraduate Research Program Award (\$500) & 2007-2008\\
+		\@ \@  \@ \@ \@ \@  \@ \@    Third Prize of International Interdisciplinary Contest in Modeling (ICM) & 2009\\
+		\@ \@  \@ \@ \@ \@  \@ \@    Third Prize of Scholarship for Excellent Academic Performance (\$100) & 2007,2008,2009\\
+		\@ \@  \@ \@ \@ \@  \@ \@    Awarded twice ``The best debater"  title in debate competitions & 2006,2007\\
+		\\
+\end{tabular*}
+
+
+	
+\ressection{Skills}
+
+\begin{description}
+\item[\@ \@  \@ \@ \@ \@  \@ \@ Programming Languages:]
+Python, C,  {\texfont \TeX}, Javascript, Shell, SQL, PHP, HTML, Perl, Java, Haskell, Assembly
+\item[\@ \@  \@ \@ \@ \@  \@ \@ Operating Systems:]
+Linux (Gentoo Linux), OS X, Windows, FreeBSD
+\item[\@ \@  \@ \@ \@ \@  \@ \@ Applications:]
+MATLAB, Vim, Cadence Virtuoso, {\texfont \LaTeX}, Photoshop, MS Office
+\item[\@ \@  \@ \@ \@ \@  \@ \@ Framework:]
+Android Development Framework (JAVA), GNU Radio, Django (Python), Web.py (Python), jQuery(Javascript)
+\item[\@ \@  \@ \@ \@ \@  \@ \@ Miscellaneous:]
+Rapid Prototyping Ability, Excellent Troubleshooting and Debugging Skills, Good Problem Solving Skills. 
+\end{description}
+
+
+%\ressection{Interests}
+
+%\begin{description}
+%\item[Academic:] Wireless Sensor and Actor networks, Cognitive Radio/Dynamic Spectrum Access Networks, Optimization of wireless communication networks
+%\item[Sports:] Jogging and swimming
+%\item[Computers:]  Enjoy using and learning Linux systems, Building electronics projects, and writing small tool-kits using Python
+%\item[Membership:] Student member of Institution of Mechanical Engineers (IMechE) in 2009-2010
+%\item[Other:] Reading novels, Raising pets
+%\end{description}
+
+\end{document}
