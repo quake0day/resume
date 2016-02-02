@@ -1,0 +1,116 @@
+\documentclass[letter]{article}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+\usepackage{marvosym} % For cool symbols.
+\usepackage{enumerate}
+\usepackage{pifont}
+\renewcommand\labelitemiii{-}
+\usepackage[margin = 1.150in]{geometry}
+
+\pagestyle{empty}
+
+\newenvironment{tightitem}
+{\begin{itemize}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{itemize}}
+%
+%\newenvironment{tightenumerate}
+%{\begin{enumerate}
+%\setlength{\itemsep}{1pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}}
+%{\end{enumerate}}
+
+\newcommand{\heading}[1]{\item \large \textsc{#1} \normalsize}
+
+\newenvironment{experience}[4]{
+\item \textbf{#1.} \hfill #3 - #4 \\
+\emph{#2}
+}{
+}
+
+\newcommand{\publication}[4]{\item #1. #2. \emph{#3.} #4}
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+    
+
+\begin{document}
+\normalsize
+
+\begin{description}
+
+\heading{References}\\
+
+
+\begin{tabular}{lr}
+% Referee 1
+\begin{minipage}[t]{3.5in}
+Dr.\ Kui Ren\\
+Professor, IEEE Fellow\\
+Department of Computer Science \& Engineering\\
+University at Buffalo, the State University of New York\\
+TEL: (716)-645-1587\\
+Email: \href{mailto:kuiren@buffalo.edu}{kuiren\textrm{@}buffalo.edu}\\
+Web: \href{http://www.acsu.buffalo.edu/~kuiren/index.html}{http://www.acsu.buffalo.edu/~kuiren/index.html} \\
+\end{minipage}
+\\
+\\
+% Referee 2
+\begin{minipage}[t]{3.5in}
+Dr.\ Chunming Qiao\\
+Professor, IEEE Fellow\\
+Department of Computer Science \& Engineering\\
+University at Buffalo, the State University of New York\\
+TEL: (716)-645-4751\\
+Email:  \href{mailto:qiao@buffalo.edu}{qiao\textrm{@}buffalo.edu}\\
+Web:  \href{http://www.cse.buffalo.edu/~qiao/homepage/Homepage.html}{http://www.cse.buffalo.edu/~qiao/homepage/Homepage.html} \\
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+% Referee 3
+\begin{minipage}[t]{3.5in}
+Dr.\ Tommaso Melodia\\
+Associate Professor\\
+Department of Electrical and Computer Engineering\\
+Northeastern University\\
+TEL: (617)-373-3354\\
+Email: \href{mailto:melodia@ece.neu.edu}{melodia\textrm{@}ece.neu.edu}\\
+Web: \href{http://www.ece.neu.edu/wineslab/tmelodia.php}{http://www.ece.neu.edu/wineslab/tmelodia.php} 
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+% Referee 4
+\begin{minipage}[t]{3.5in}
+Dr.\ Xinwen Fu\\
+Associate Professor\\
+Department of Computer Science \\
+University of Massachusetts Lowell \\
+TEL: (978) 934-3623\\
+Email: \href{mailto:xinwenfu@cs.uml.edu}{xinwenfu\textrm{@}cs.uml.edu}\\
+Web: \href{http://www.cs.uml.edu/~xinwenfu/}{http://www.cs.uml.edu/~xinwenfu/} 
+\end{minipage}
+
+\end{tabular}
+\
+
+\end{description}
+\end{document}
