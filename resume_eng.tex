@@ -1,234 +1,380 @@
-% resume.tex
-%
-% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-%
-% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+\documentclass[letter]{article}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{hyperref}
 
-\documentclass[a4paper, 10pt]{article}
-
-
-
-
-%-----------------------------------------------------------
-%Margin setup
-\setlength{\voffset}{0.1in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\paperheight}{11in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textheight}{11in}
-\setlength{\textheight}{9.5in}
-\setlength{\topmargin}{-0.25in}
-\setlength{\textwidth}{7in}
-\setlength{\topskip}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\evensidemargin}{-0.25in}
-
-%Fonts and Tweaks for XeLaTeX
-\usepackage{fontspec}% provides font selecting commands 
-\usepackage{xunicode}% provides unicode character macros 
-\usepackage{xltxtra} % provides some fixes/extras
-\defaultfontfeatures{Scale=MatchLowercase}
-%\setmainfont[Mapping=tex-text]{Calibri}
-%\setmainfont[Mapping=tex-text]{Qlassik Medium}
-%\setmainfont[Mapping=tex-text]{Gill Sans MT}
-\setmainfont[Mapping=tex-text]{Trebuchet MS}
-\newfontfamily\notefont{Times}
-\newfontfamily\texfont{Baskerville}
-%\setsansfont[Mapping=tex-text]{Skia}
-%\setmonofont{Courier}
-%-----------------------------------------------------------
-
-
-
-
-%\usepackage{fullpage}
-\usepackage{textcomp}
-%\textheight=9.0in
-\pagestyle{empty}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-
-\usepackage[svgnames]{xcolor}           % xcolor package
-\definecolor{shadecolor}{gray}{0.90}    % Background color of section bars
-%Styling Itemizations
-
+\usepackage{marvosym} % For cool symbols.
+\usepackage{enumerate}
 \usepackage{pifont}
-\usepackage{bbding}
-\renewcommand{\labelitemi}{*}
+\renewcommand\labelitemiii{-}
+\usepackage[margin = 1.150in]{geometry}
 
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
-\newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
+\pagestyle{empty}
 
+\newenvironment{tightitem}
+{\begin{itemize}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}
+{\end{itemize}}
+%
+%\newenvironment{tightenumerate}
+%{\begin{enumerate}
+%\setlength{\itemsep}{1pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}}
+%{\end{enumerate}}
 
-\newcommand{\ressection}[1]
-{\fcolorbox{black}{shadecolor}{\vbox{\hsize 0.98\textwidth \textbf{\mbox{~}{\@ \large #1} \vphantom{p\^{E}}}}}}
- 
-% Usage : ressubsection{item1}{comment1}{item2}{comment2}
-\newcommand{\ressubsection}[4]
-{
-\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}
+\newcommand{\heading}[1]{\item \large \textsc{#1} \normalsize}
+
+\newenvironment{experience}[4]{
+\item \textbf{#1.} \hfill #3 - #4 \\
+\emph{#2}
+}{
 }
- 
-% Usage : resrowitemlr{item}{comment}
-\newcommand{\resrowitemlr}[2]
-{
-\begin{tabular*}{0.9\textwidth}{l@{\extracolsep\fill}r}
-    \textbf{#1} & #2 \\
-\end{tabular*}
+
+\newcommand{\publication}[4]{\item #1. #2. \emph{#3.} #4}
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
 }
- 
 
-%-----------------------------------------------------------
-
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+    
 
 \begin{document}
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large \fontsize{26}{26} {\notefont Si Chen}}  & \Phone\@ (716)335-8052\\
-4285 Chestnut Ridge Road, Apt 1-D& \Envelope\@  schen23@buffalo.edu \\
-Amherst, NY 14228 \\
-\end{tabular*}
-\\
-\vspace{0.1in}
 
-\ressection{Education}
-\begin{itemize}
-\item
-	\ressubheading{University at Buffalo - SUNY}{Buffalo, NY}{Ph.D., Computer Science (GPA 3.8)}{Sep. 2012 -  Feb. 2016}
-	\begin{itemize}
-		\resitem{Research Assistance in Ubiquitous Security and Privacy Research Laboratory
-(UbiSeC Lab)}
-	\end{itemize}
-	
-\item
-	\ressubheading{University at Buffalo - SUNY}{Buffalo, NY}{M.S., Electrical Engineering (GPA 3.8)}{Sep. 2010 - May. 2012}
-	\begin{itemize}
-	\resitem{Research Assistance in Wireless Networks and Embedded Systems Lab (WINES Lab)}
-		%\resitem{Relevant courses: Multimedia Wireless Sensor Network, Principle of Information Theory and Coding, Optimization of Wireless Network}
-	\end{itemize}
+\Huge \textbf{Si Chen} \hfill \small
+\begin{tabular}{rl}
+Position & Assistant Professor \\
+Email   & \href{mailto:schen@wcupa.edu}{schen@wcupa.edu} \\
+Web     & \url{http://www.cs.wcupa.edu/schen} \\
+Address & UNA 130, 25 University Ave, West Chester, PA\\
+Phone  & (610)-436-2663\\
+\end{tabular}
 
-%\item
-	%\ressubheading{China Agricultural University}{Beijing, China}{B.S., Measuring \& Control Technology and Instrumentations}{2006-2010}
-	%\begin{itemize}
-	%	\resitem{Graduated with Honors, Top 100 Excellent Graduate Theses award winner}
-		%\resitem{Relevant courses: Application of MATLAB, C Programming Language, Principles of Microcomputer and Interface Technology, Signal Processing, Sensor and Detecting circuits, Practical Image Processing, Computer Measurement \& Control Technology, Principle \& Application of Single Chip Microcomputer}
-	%\end{itemize}
-
-\end{itemize}
-
-\ressection{Selected Publications}
-\begin{itemize}
-\item 
-Si Chen, Muyuan Li, Kui Ren, Xinwen Fu, Chunming Qiao, \emph{``Rise of the Indoor Crowd: Reconstruction of Building Interior View via Mobile Crowdsourcing,"} in \textbf{Proceedings of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015),} 2015.
-\item 
-Si Chen, Muyuan Li, Kui Ren, Chunming Qiao, \emph{``CrowdMap: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos,"} in \textbf{Proceedings of the 35th IEEE International Conference on Distributed Computing Systems (ICDCS'15),} 2015.
-\item 
-Muyuan Li, Haojin Zhu, Zhaoyu Gao, Si Chen, Le Yu, Shangqian Hu, Kui Ren, \emph{``All your location are belong to us: Breaking mobile social networks for automated user location tracking,"} in \textbf{Proceedings of the 15th ACM international symposium on Mobile ad hoc networking and computing (Mobihoc'14),} 2014.
-\item 
-Bingsheng Zhang, Qin Zhan, Si Chen, Muyuan Li, Kui Ren, Cong Wang, Di Ma, \emph{``PriWhisper: Enabling Keyless Secure Acoustic Communication for Smartphones,"} in \textbf{IEEE Internet of Things Journal,} 2014.
-%\item 
-%Si Chen, Muyuan Li, Kui Ren, \emph{``The power of indoor crowd: Indoor 3D maps from the crowd,"} in \textbf{Proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS),} 2014.
-%\item 
-%Si Chen, Muyuan Li, Zhan Qin, Bingsheng Zhang, Kui Ren, \emph{``AcousAuth: An acoustic-based mobile Application for user authentication,"} in \textbf{Proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS),} 2014.
-
-
-%\item 
-%Si Chen, Muyuan Li, Kui Ren, \emph{``The power of indoor crowd: Indoor 3D maps from the crowd,"} in \textbf{IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS),} 2014.
-
-\item 
-E Koski, S Chen, S Pudlewski, T Melodia,\emph{"Network simulation for advanced HF communications engineering,"} in \textbf{The 12th International Conference on Ionospheric Radio Systems and Techniques (IRST2012), 2012.}
-\end{itemize}
-
-\ressection{Research Projects}
-\begin{itemize}
-\item
-	\ressubheading{IndoorCrowd}{Buffalo, NY}{Project Leader, Ubiquitous Security and Privacy Research Laboratory
-(UbiSeC Lab)}{Jun. 2013 - Present}
-	\begin{itemize}
-		\resitem{Designed and Implemented a smartphone empowered cloud-based crowdsourcing system for large-scale indoor scene reconstruction. }
-	\end{itemize}
-
-
-\item
-	\ressubheading{AcousAuth}{Buffalo, NY}{Project Leader, Ubiquitous Security and Privacy Research Laboratory
-(UbiSeC Lab)}{Jun. 2013 - Oct. 2013}
-	\begin{itemize}
-		\resitem{Designed and Implemented a smartphone empowered personal authentication system exploiting keyless acoustic communication. }
-                 \resitem{Winner of the 19th Annual International Conference on Mobile Computing and Networking (MobiCom'13) App Competition Finalists (top 10).}
-	\end{itemize}
-
-
-%\item
-	%\ressubheading{Intellectualized Greenhouse Measuring \& Control System}{Beijing, China}{Project Leader, National Innovation Program for Undergraduates of China}{2009 - May. 2010}
-	%\begin{itemize}
-	%	\resitem{Used CC2430 wireless node and Zigbee stack (Z-stack) to measure and control a greenhouse model's humidity and temperature}
-	%	\resitem{Used Python, PHP, Javascript (jQuery), MySQL and C to create a realtime B/S System}
-	%	\resitem{Designed a PCB with controllers that can use CC2430 with computer to remote control the greenhouse model}
-	%	\resitem{Designed and built a greenhouse model}
-	%	\resitem{Implemented PHP reflection mechanism to create a plugin system for further system enhancement}
-	%\end{itemize}
-
-
-
-%\item
-%Rongchang Yuan, Si Chen, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan ,\emph{"Simulation and Models on Control of Pests with Ozone in Greenhouses Plant,"} in \textbf{ IASTED International Conference on Modelling, Simulation, and Identification (MSI'2011)}, Pittsburgh, USA, November 2011.
-%\item
-%Rongchang Yuan, HaiganYuan, Si Chen, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma,\emph{"Research on the k-coverage local wireless network and its communication coordination mechanism design,"} in \textbf{the Fifth International Conference on Computer and Computing Technologies in Agriculture (CCTA2011)}, Beijing, China, October 2011
-\end{itemize}
-\ressection{Work Experience}
-\begin{itemize}
-\item
-	\ressubheading{Sina Weibo (China)}{Beijing, China}{Application Dev Engineer (Internship)}{Apr. 2010 - July. 2010}
-	\begin{itemize}
-		\resitem{Used Python (Matplotlib), Javascript (jQuery) and PHP with MySQL to build an UNIX cluster administration system}
-	%	\resitem{Designed and implemented an algorithm to calculate daily hottest words from Weibo (Chinese twitter) search log in Python}
-		\resitem{Created an usage frequency indicator to show Weibo's  current usage frequency in different areas using Python, C, PHP with MySQL, Javascript }
-	\end{itemize}
-
-%\item
-	%\ressubheading{ASSE/WH China}{Beijing, China}{Website Developer and Website Administrator (Part-time job)}{Oct. 2007- Feb. 2008}
-	%\begin{itemize}
-		%\resitem{Re-constructed company's website using Mambo CMS System}
-		%\resitem{Built an online registration system using PHP and MySQL}
-	%\end{itemize}
-
-
-\end{itemize}
-
-
-
-
-\ressection{Skills}
+\normalsize
 
 \begin{description}
-\item[\@ \@  \@ \@ \@ \@  \@ \@ Programming Languages:]
-Python, C, Javascript, Java, C++
-\item[\@ \@  \@ \@ \@ \@  \@ \@ Operating Systems:]
-Linux (Gentoo), OS X, Windows,
+
+%\heading{Highlights}
+%\begin{itemize}
+%\item Strong research background in cyber-physical system security, security and privacy on smart wearable device, mobile security, cloud-assisted mobile sensing and wireless system.
+%
+%\item Active involvement in the preparation and development of grant proposals submitted to different government agencies and companies, such as NSF and MSR.
+%\item Experience in teaching and mentoring both undergraduate and graduate students
+%\item Experience in research collaboration in multicultural environments
+%\end{itemize}
+
+%
+%\heading{Research Interests}
+%
+%%\vspace{0.08in}
+%My research interests include cyber-physical system security, wireless system and smartphone-enabled crowdsourcing system,  with current focus on exploring and improving the cloud-assisted mobile sensing security. \\
+%
+%\heading{Teaching Interests}
+%
+%I feel confident about lecturing courses in areas of cyber-physical system security, computer architecture, advanced computer network, cloud computing security, smartphone security, smartphone sensing, and applied cryptography. I am also interested in contributing to new courses and seminars related to security and privacy on smart wearable device, mobile wireless security and crowdsensing system.
+
+%\vspace{0.08in}
+
+
+\heading{Education}
+
+\begin{itemize}
+\item \textbf{University at Buffalo - SUNY, Buffalo, NY, USA} \\
+Ph.D. in Computer Science and Engineering, May 2016\\
+Thesis: ``Cloud-assisted Mobile Sensing System" \\
+Advised by Professor Kui Ren
+
+\item \textbf{University at Buffalo - SUNY, Buffalo, NY, USA} \\
+M.S. in Electrical Engineering, May 2012\\
+Thesis: ``Groundwave Modelling and Online Simulation System for Advanced HF Radio Networking" \\
+Advised by Professor Tommaso Melodia
+
+\item \textbf{China Agricultural University, Beijing, China} \\
+B.S. in Measuring \& Control Technology and Instrumentations (School of Engineering), June 2010\\
+\end{itemize}
+
+%
+%\newpage
+
+
+
+
+\heading{Publications}
+
+%As of December, 2015, my works have received \href{http://scholar.google.com/citations?hl=en&user=wRa_lOEAAAAJ}{\underline{total citations over 800 with h-index 11 as seen from Google Scholar.}}
+%For my your particular contribution in the jointly-authored scholarly works, please refer to my attached research statement for detailed information.
+
+
+
+%\publication{\textbf{Cong Wang}, Ning Cao, Kui Ren, and Wenjing Lou}{Enabling Secure and Efficient Ranked Keyword Search over Outsourced Cloud Data} {\textbf{IEEE Transactions on Parallel and Distributed Systems (TPDS)}, 2011} {Accepted for publication.}
+
+
+%\publication{Qian Wang, \textbf{Cong Wang}, Jin Li, Kui Ren, and Wenjing Lou} {Enabling Public Auditability and Data Dynamics for Storage Security in Cloud Computing} {\textbf{IEEE Transactions on Parallel and Distributed Systems (TPDS)}, Vol. 22, No. 5, pp. 847-859, May, 2011}
+%\\ \textbf{Citations $>$ 19.}
+
+%\publication{Kui Ren, \textbf{Cong Wang}, and Qian Wang} {Security Challenges in Public Cloud} {\textbf{IEEE Internet Computing Magazine}, Vol. 16, No. 1, pp. 69-73, Jan/Feb, 2012, \textbf{Invited Paper}}
+
+%IEEE Internet Computing, Vol. 16, No. 1, pp. 69-73, Jan/Feb, 2012, with C. Wang and Q. Wang. (Invited Paper)
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, and Kui Ren} {Enhancing Attribute-based Encryption with Attribute Hierarchy} {\textbf{ACM Mobile Networks and Applications (MONET)}, vol. 16, pp. 553-561, 2010} {}
+
+
+
+
+\textbf{Conference Papers}
+
+\begin{enumerate}[{C-}1.]
+
+\publication{\textbf{Si Chen}, Muyuan Li, Kui Ren, Xinwen Fu, Chunming Qiao} {Rise of the Indoor Crowd: Reconstruction of Building Interior View via Mobile Crowdsourcing}  {\textbf{The 13th ACM Conference on Embedded Networked Sensor Systems (SenSys'15)}, Seoul, South Korea, November 1-4, 2015, \textbf{13-page}} \\
+\textbf{Acceptance ratio} $<$ 20\%.
+
+\publication{\textbf{Si Chen}, Muyuan Li, Kui Ren, Chunming Qiao} {CrowdMap: Accurate Reconstruction of Indoor Floor Plan from Crowdsourced Sensor-Rich Videos}  {\textbf{The 35th IEEE International Conference on Distributed Computing Systems (ICDCS'15)}, Columbus, Ohio, June 29 - July 2, 2015, pp. 1-10, \textbf{10-page }} {} \\
+\textbf{Acceptance ratio} = 70/543 $=$ 12.89\%.
+
+\publication{Muyuan Li, Haojin Zhu, Zhaoyu Gao, \textbf{Si Chen}, Le Yu, Shangqian Hu, Kui Ren} {All your location are belong to us: Breaking mobile social networks for automated user location tracking}  {\textbf{The 15th ACM international symposium on Mobile ad hoc networking and computing (Mobihoc'14)}, Philadelphia, PA, August 11-14, 2014, pp. 43-52, \textbf{10-page }} \\
+\textbf{Acceptance ratio} = 40/211 $=$ 18.9\%. \textbf{Citations $>$ 22.}
+
+\publication{Eric Koski, \textbf{Si Chen}, Scott Pudlewski, Tommaso Melodia} {Network simulation for advanced HF communications engineering}  {\textbf{The 12th International Conference on Ionospheric Radio Systems and Techniques (IRST'12)} York, UK, May 15-17, 2012, pp. 45, \textbf{5-page }}
+
+\publication{\textbf{Si Chen}, Lina Ling, Yuan Rongchang, Longqing Sun} {Classification Model of Seed Cotton Grade Based on Least Square Support Vector Machine Regression Method}  {\textbf{The 6th IEEE International Conference on Information and Automation for Sustainability (ICIAfS'12)}, Beijing, China, 2012, pp. 198--202, \textbf{4-page}} 
+%\\ \textbf{Acceptance ratio} = 276/1575 = 17.5\%. \textbf{Citations $>$ 86.}
+
+\publication{Rongchang Yuan, Zhengjiang Li, \textbf{Si Chen}} {Movement and deformation of virtual object based on argument passing method}  {\textbf{The IEEE International Conference on Virtual Environments, Human-Computer Interfaces and Measurement Systems (VECIMS'12)}, Tianjin, China, 2012, pp. 103-106, \textbf{5-page}} 
+
+\publication{Rongchang Yuan, \textbf{Si Chen}, Zhengjiang Li, Shengrong Lu, Li Wang, Haigan Yuan} {Simulation and Models on Control of Pests with Ozone in Greenhouses Plant}  {\textbf{The IASTED International Conference on Modeling, Simulation, and Identification (MSI'11)}, Pittsburgh, PA, Nov 7-9, 2011, \textbf{5-page}} 
+
+\publication{Rongchang Yuan, HaiganYuan, \textbf{Si Chen}, Longqing Sun, Feng Qin, Han Zhang, Yukun Zhu, Daokun Ma} {Research on the k-coverage local wireless network and its communication coordination mechanism design}  {\textbf{the 5th International Conference on Computer and Computing Technologies in Agriculture (CCTA '11)}, Beijing, China, Oct 29-31, 2011, \textbf{12-page }} 
+
+%\publication{Ning Cao, \textbf{Cong Wang}, Ming Li, Kui Ren, and Wenjing Lou} {Privacy-Preserving Multi-keyword Ranked Search over Encrypted Cloud Data}  {\textbf{The 30th IEEE Conference on Computer Communications (INFOCOM'11)}, Shanghai, China, April 10-15, 2011, pp. 829-937, \textbf{9-page double-column full paper}} {}
+%\\ \textbf{Acceptance ratio} = 291/1823 $<$ 16\%. \textbf{Citations $>$ 20.}
+
+
+%\publication{Ning Cao, Zhenyu Yang, \textbf{Cong Wang}, Kui Ren, and Wenjing Lou}
+%{Privacy-perserving Query over Encrypted Graph-Structured Data in Cloud Computing}
+%{\textbf{The 31st International Conference on Distributed Computing Systems (ICDCS'11)}, Minneapolis, MN, June 20-24, 2011, pp. 393-402, \textbf{10-page double-column full paper}} {}\\
+%\textbf{Acceptance ratio} = 10/76 = 13\% for the track of security and privacy.
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, Ning Cao, Kui Ren, and Wenjing Lou} {Fuzzy Keyword Search over Encrypted Data in Cloud Computing}
+%{\textbf{The 29th IEEE Conference on Computer Communications}, mini-conference (\textbf{INFOCOM'10}), San Diego, CA, March 15-19, 2010, pp. 441-445, \textbf{5-page double-column short paper}}
+%\\ \textbf{Acceptance ratio} = (106+276)/1575 = 24.3\%. \textbf{Citations $>$ 29.}
+
+%\publication{Qian Wang, Kui Ren, \textbf{Cong Wang}g, and Wenjing Lou} {Efficient Fine-grained Data Access Control in Wireless Sensor Networks}  {The 28th International Conference for Military Communications (MILCOM'09), Boston, MA,
+%October 18-21, 2009, pp. 1-7, \textbf{7-page double-column full paper}}{\textbf{Invited.}}
+
+%\publication{Jin Li, Qian Wang, \textbf{Cong Wang}, and Kui Ren}  {Enhancing Attribute-based Encryption with Attribute Hierarchy} {The 4th International Conference on Communications and Networking in China (ChinaCom'09), Xi'an,
+%China, August 26-28, 2009, pp. 1-5}{\textbf{Best Paper Award.}}
+
+\end{enumerate}
+
+\textbf{Journal and Magazine Articles}
+
+\begin{enumerate}[{J-}1.]
+
+
+
+\publication{Bingsheng Zhang, Qin Zhan, \textbf{Si Chen}, Muyuan Li, Kui Ren, Cong Wang, Di Ma} {PriWhisper: Enabling Keyless Secure Acoustic Communication for Smartphones}
+{\textbf{IEEE Internet of Things Journal (IoT)}, 2014}
+{Accepted for publication. Citations $>$ 10}.
+
+\end{enumerate}
+
+
+
+%\item \textbf{Lab Assistant} for the undergraduate course ECE 311 \emph{Engineering Electronics}, Spring 2009.
+
+
+\heading{Synergistic Activities}
+
+\begin{itemize}
+%\item \textbf{Technical Program Committee Member} for IEEE Military Communications Conference (IEEE MILCOM 2012), and IEEE Global Communications Conference (IEEE Globecom 2012).
+\item \textbf{Technical Program Committee (TPC)} for Milcom 2016
+
+\item \textbf{Conference Reviewer} for ICCCN'16, ACM CCS'15, ICDCS'15, ESORICS'15, AsiaCCS'15, Cloud'15, ICCCN'15, DBSec'15, CoudCom'15, ACM CHI'15, CloudNet'15, ISC'15, Securecomm'15, IEEE MSN'15, IPCCC'15, INFOCOM'14, ACM CCS'14, ICDCS'14, ESORICS'14, ICNP'14, AisaCCS'14, MobiHoc'14, CNS'14, CloudNet'14,DBSec'14, SecureComm'14.
+\item \textbf{Journal Reviewer} for IEEE Trans. on Parallel and Distributed Systems, IEEE Trans. on Services Computing, IEEE Trans. on Smart Grid, IEEE Trans. on Vehicular Technology, IEEE Trans. on Wireless Communications, IEEE Security \& Privacy magazine, IEEE Network Magazine, Journal of Computer Security, Journal of Mobile Communication, Computation and Information, Journal of Parallel and Distributed Computing.
+
+%(total 35 venues)
+
+\item \textbf{Webchair} for the 27th IEEE Annual Computer Communications Workshop (CCW'13).
+
+%\item \textbf{Student Volunteer} for ACM Conference on Computer and Communications Security, CCS 2009$\sim$2011.
+\end{itemize}
+
+\heading{Collaborators and Appointments}
+\begin{itemize}
+\item \textbf{Recent collaborators:}  Chunming Qiao (University at Buffalo), Xinwen Fu (University of Massachusetts Lowell). Tommaso Melodia (Northeastern University), Lu Su (University at Buffalo).
+
+\item \textbf{Appointments:} Advisor for WCU Computer Science Club. Coach for ICPC ACM programming competition. 
+\end{itemize}
+
+
+
+%{\small (grad)}
+%\vspace{-2mm}
+%\begin{tightitem}
+%\item NSF Graduate Research Fellowship, 2006
+%\item NDSEG Fellowship, 2006
+%\end{tightitem}
+%{\small (undergrad)}
+%\vspace{-2mm}
+%\begin{tightitem}
+%\item Best Paper, USENIX Security 2005
+%\item Dowling Prize, 2005 {\footnotesize (UW Math Dept.)}
+%\item Fred W. and Josephine Colbeck Scholarship, 2004 {\footnotesize (UW ECE Dept.)}
+%\item Robert Mensel Scholarship, 2003 {\footnotesize (UW ECE Dept.)}
+%\item Richard H. Thomas Family Distinguished Scholarship, 2002 {\footnotesize (UW ECE Dept.)}
+%\item Henry Vilas Scholarship, 2000 {\footnotesize (UW)}
+%\item Kemper K. Knapp Scholarship, 2000 {\footnotesize (UW)}
+%\item Freshman Engineering Scholarship, 2000 {\footnotesize (UW College of Engr.)}
+%\end{tightitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\heading{References}
+%Available upon request.
+%
+%\begin{table*}[h]
+%\renewcommand{\arraystretch}{1.0}
+%\centering
+%%    \caption{}     % NOTE!  caption goes _before_ the table contents !!
+%%    \begin{small}
+%\begin{tabular}{lll}
+%\textbf{Professor Kui Ren} &   \textbf{Professor Jia Wang}  &  \textbf{Professor Wenjing Lou}    \\
+%    Department of ECE      &   Department of ECE   &     Department of ECE   \\
+%Illinois Institute of Technology       &  Illinois Institute of Technology      & Worcester Polytechnic Institute    \\
+%    Siegal Hall, Room 319 & Siegal Hall, Room 317  & Atwater Kent, Room 303 \\
+% 3301 S. Dearborn St.,  & 3301 S. Dearborn St.,  &   100 Institute Road,\\
+% Chicago, IL 60616 &   Chicago, IL 60616 & Worcester, MA 01609-2280 \\
+%    (312) 567 3481 &   (312) 567 3696  &  (508) 831 5338 \\
+%\href{mailto:kren@ece.iit.edu}{kren@ece.iit.edu}  & \href{mailto:jwang@ece.iit.edu}{jwang@ece.iit.edu}   &  \href{mailto:wjlou@ece.wpi.edu}{wjlou@ece.wpi.edu}
+%    \end{tabular}
+%%    \end{small}
+%\end{table*}
+
+%
+%\begin{itemize}
+%\item \textbf{Professor Kui Ren}\\
+%Department of ECE\\
+%Illinois Institute of Technology\\
+%Siegal Hall, Room 319\\
+%3301 S. Dearborn St.,\\
+%Chicago, IL 60616 \\
+%(312) 567 3481\\
+%\href{mailto:kren@ece.iit.edu}{kren@ece.iit.edu}
+%\end{itemize}
+%
+%\begin{itemize}
+%\item \textbf{Professor Wenjing Lou}\\
+%Department of ECE\\
+%Worcester Polytechnic Institute\\
+%Atwater Kent, Room 303\\
+%100 Institute Road,\\
+%Worcester, MA 01609-2280\\
+%(508) 831 5338\\
+%\href{mailto:wjlou@ece.wpi.edu}{wjlou@ece.wpi.edu}
+%
+%\item \textbf{Professor Jia Wang}\\
+%Department of ECE\\
+%Illinois Institute of Technology\\
+%Siegal Hall, Room 317\\
+%3301 S. Dearborn St.,\\
+%Chicago, IL 60616 \\
+%(312) 567 3696\\
+%\href{mailto:jwang@ece.iit.edu}{jwang@ece.iit.edu}
+%
+%\end{itemize}
+
+%\begin{itemize}
+%\item \textbf{Professor Xiangyang Li}\\
+%Department of Computer Science\\
+%Illinois Institute of Technology\\
+%Stuart Building, Room 237D\\
+%10 W. 31st Street,\\
+%Chicago, IL, 60616\\
+%(312) 567 5207\\
+%\href{mailto:xli@cs.iit.edu}{xli@cs.iit.edu}
+%\end{itemize}
+%
+%\heading{Graduate Coursework}
+%
+%Computer Architecture, Applied Cryptography and Computer Security, Wireless Network Security, Theory of Computation, Modern Network Concept, Wireless Networking and Mobile Computing, Multimedia Wireless Sensor Network, Principle of Information Theory and Coding, Operating Systems, Optimization of Wireless Network, Computer Vision and Image Processing, High Performance Computing, Multimedia Systems, Analog Circuits, Biomems \& Lab-On-a-Chip, Algorithms Analysis and Design, Consumer Optoelectronics\\
+\heading{Honors and Awards}
+
+%Congratulations! You have been awarded the Graduate College Dean's Fellowship for study in the Electrical Engineering program at Illinois
+%Institute of Technology for the 2007-08 academic year. This fellowship covers one-half of the full-time graduate tuition for a maximum of nine
+%credit hours per semester, amounting to $7,002 for the academic year.
+
+\begin{tightitem}
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5888673} {\underline{No. 1 top accessed}} INFOCOM'11 article ``Secure and practical outsourcing of linear programming in cloud computing" in IEEE Xplore as of September, 2011 (1 out of 291 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5461675}{\underline{No. 1 top accessed}} INFOCOM'10 article ``Privacy-preserving Public Auditing for Storage Security in Cloud Computing" in IEEE Xplore as of May, 2011 (1 out of 276 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=5541617}{\underline{No. 1 top accessed}} ICDCS'10 article ``Secure Ranked Keyword Search Over Encrypted Cloud Data" in IEEE Xplore as of May, 2011. (1 out of 84 accepted papers)
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=71}{\underline{No. 1 top accessed}} IEEE TPDS article ``Enabling Public Auditability and Data Dynamics for Storage Security in Cloud Computing" in IEEE Xplore as of September, 2011.
+%\item \href{http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=4236}{\underline{No. 1 top accessed}} IEEE Internet Computing article ``Security Challenges for the Public Cloud" in IEEE Xplore as of January, 2012.
+\item The 19th Annual International Conference on Mobile Computing and Networking (ACM Mobicom'13) App Competition Finalists (top 10), 2013
+\item Student Travel Grant Awards, IEEE ICDCS 2015
+\item Top 100 Excellent Graduate Theses in China Agricultural University, 2010
+\item  Excellent Graduate Award in China Agricultural University, 2010
+\item   National University Student Innovation Program Award, 2009-2010
+\item  Undergraduate Research Program Award, 2007-2008
+\item Third Prize of International Interdisciplinary Contest in Modeling (ICM), 2009
+\item  Third Prize of Scholarship for Excellent Academic Performance, 2007, 2008, 2009
+\item Awarded ``The best debater"  title in debate competitions, 2006, 2007
+%\item Graduate College Dean's Fellowship, IIT, August 2008.
+%\item Scholarship of Wuhan University for Graduate Student, 2006
+%\item Scholarship of Wuhan University, Excellent Student Award, 2001$\sim$2004\\
+\end{tightitem}
+%\heading{References}\\
+%
+%
+%\begin{tabular}{lr}
+%% Referee 1
+%\begin{minipage}[t]{3.5in}
+%Dr.\ Kui Ren\\
+%Associate Professor, IEEE Fellow\\
+%Department of Computer Science \& Engineering\\
+%University at Buffalo, the State University of New York\\
+%TEL: (716)-645-1587\\
+%Email: \href{mailto:kuiren@buffalo.edu}{kuiren\textrm{@}buffalo.edu}\\
+%Web: \href{http://www.acsu.buffalo.edu/~kuiren/index.html}{http://www.acsu.buffalo.edu/~kuiren/index.html} \\
+%\end{minipage}
+%\\
+%\\
+%% Referee 2
+%\begin{minipage}[t]{3.5in}
+%Dr.\ Chunming Qiao\\
+%Professor, IEEE Fellow\\
+%Department of Computer Science \& Engineering\\
+%University at Buffalo, the State University of New York\\
+%TEL: (716)-645-4751\\
+%Email:  \href{mailto:qiao@buffalo.edu}{qiao\textrm{@}buffalo.edu}\\
+%Web:  \href{http://www.cse.buffalo.edu/~qiao/homepage/Homepage.html}{http://www.cse.buffalo.edu/~qiao/homepage/Homepage.html} \\
+%\end{minipage}
+%\\
+%\\ % Additional newline for spacing.
+%% Referee 3
+%\begin{minipage}[t]{3.5in}
+%Dr.\ Tommaso Melodia\\
+%Associate Professor\\
+%Department of Electrical and Computer Engineering\\
+%Northeastern University\\
+%TEL: (617)-373-3354\\
+%Email: \href{mailto:melodia@ece.neu.edu}{melodia\textrm{@}ece.neu.edu}\\
+%Web: \href{http://www.ece.neu.edu/wineslab/tmelodia.php}{http://www.ece.neu.edu/wineslab/tmelodia.php} 
+%\end{minipage}
+%\end{tabular}
 
 \end{description}
-
-%\ressection{Interests}
-
-%\begin{description}
-%\item[Academic:] Wireless Sensor and Actor networks, Cognitive Radio/Dynamic Spectrum Access Networks, Optimization of wireless communication networks
-%\item[Sports:] Jogging and swimming
-%\item[Computers:]  Enjoy using and learning Linux systems, Building electronics projects, and writing small tool-kits using Python
-%\item[Membership:] Student member of Institution of Mechanical Engineers (IMechE) in 2009-2010
-%\item[Other:] Reading novels, Raising pets
-%\end{description}
-
 \end{document}
